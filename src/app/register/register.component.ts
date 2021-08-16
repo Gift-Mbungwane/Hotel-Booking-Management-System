@@ -6,10 +6,10 @@ import { AlertService, UserService } from '../services';
 
 @Component({
   selector: 'app-signup',
-  templateUrl: './signup.component.html',
-  styleUrls: ['./signup.component.css']
+  templateUrl: './register.component.html',
+  styleUrls: ['./register.component.css']
 })
-export class SignupComponent implements OnInit {
+export class RegisterComponent implements OnInit {
 
   registerForm: FormGroup;
   loading = false;
@@ -26,7 +26,7 @@ export class SignupComponent implements OnInit {
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],
       email: ['', Validators.required],
-      phone: ['', Validators.re],
+      phone: ['', Validators.required],
       password: ['', [Validators.required, Validators.minLength(6)]]
     });
   }
