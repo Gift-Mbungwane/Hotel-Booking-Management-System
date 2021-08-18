@@ -1,16 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { first } from 'rxjs/operators';
+
 import { AlertService, UserService } from '../services';
 
-@Component({
-  selector: 'app-signup',
-  templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css']
-})
+@Component({ templateUrl: 'register.component.html' })
 export class RegisterComponent implements OnInit {
-
   registerForm: FormGroup;
   loading = false;
   submitted = false;
@@ -25,8 +21,7 @@ export class RegisterComponent implements OnInit {
     this.registerForm = this.formBuilder.group({
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],
-      email: ['', Validators.required],
-      phone: ['', Validators.required],
+      username: ['', Validators.required],
       password: ['', [Validators.required, Validators.minLength(6)]]
     });
   }
@@ -55,5 +50,4 @@ export class RegisterComponent implements OnInit {
           this.loading = false;
         });
   }
-
 }

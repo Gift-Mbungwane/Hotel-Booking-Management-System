@@ -1,5 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, Output } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import * as EventEmitter from 'events';
 import { SwiperOptions } from 'swiper';
+import { LoginComponent } from './login/login.component';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +11,9 @@ import { SwiperOptions } from 'swiper';
 })
 export class AppComponent {
   title = 'Hotel-Booking-Management-System';
+  loginButton: LoginComponent;
 
+  constructor(private route: ActivatedRoute) { }
   Images: Array<any> = [
     {
       src: 'http://localhost:52860/src/app/images/SlideImage1.png',
@@ -33,5 +38,6 @@ export class AppComponent {
       prevEl: '.swiper-button-prev'
     },
     spaceBetween: 40
-  }; 
+  };
+
 }

@@ -7,7 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { PaymentComponent } from './payment/payment.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { AuthGuard } from './guards';
 import { AlertService, AuthenticationService, UserService } from './services';
@@ -18,6 +18,7 @@ import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { ContactComponent } from './contact/contact.component';
 import { BookingComponent } from './booking/booking.component';  
+import { ErrorInterceptor, fakeBackendProvider, JwtInterceptor } from './helpers';
 
 @NgModule({
   declarations: [
@@ -50,6 +51,10 @@ import { BookingComponent } from './booking/booking.component';
     AlertService,
     AuthenticationService,
     UserService,
+    fakeBackendProvider,
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+    
   ],
   bootstrap: [AppComponent]
 })

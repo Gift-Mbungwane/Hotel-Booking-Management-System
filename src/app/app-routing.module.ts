@@ -19,7 +19,7 @@ export const appRoutes: Routes = [
   { path: 'booking', component: BookingComponent },
   { path: 'login', component: LoginComponent, data: { requiresLogin: true } },
   { path: 'register', component: RegisterComponent },
-  { path: 'payment', component: PaymentComponent /*canActivate: [AuthGuard]*/ },
+  { path: 'payment', component: PaymentComponent, /*canActivate: [AuthGuard]*/ },
 
   // otherwise redirect to home
   { path: '**', redirectTo: '' }

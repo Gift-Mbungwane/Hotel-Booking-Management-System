@@ -1,18 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
 import { first } from 'rxjs/operators';
-import { AlertService } from '../services';
-import { AuthenticationService } from '../services/authentication.service';
 
+import { AlertService, AuthenticationService } from '../services';
 
-@Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
-})
+@Component({ templateUrl: 'login.component.html' })
 export class LoginComponent implements OnInit {
-
   loginForm: FormGroup;
   loading = false;
   submitted = false;
@@ -61,4 +55,10 @@ export class LoginComponent implements OnInit {
           this.loading = false;
         });
   }
+
+  hide() {
+    window.closed;
+
+  }
+
 }
