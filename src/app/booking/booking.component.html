@@ -1,134 +1,4 @@
-<!-- Check Availability Begin -->
-
-<div class="jasmine jasmine-100 check-availability select-list">
-  <div class="container">
-    <div class="row">
-      <form action="#" method="post">
-        <div class="col-lg-2 col-md-4 col-sm-4 col-xs-4 jasmine-m-30">
-          <h5>Arrival date</h5>
-          <div class="form-group">
-            <input id="datepicker" type="text" name="arrive" value="" class="form-control" placeholder="16 August 2021">
-          </div>
-        </div>
-        <div class="col-lg-2 col-md-4 col-sm-4 col-xs-4 jasmine-m-30">
-          <h5>Departure date</h5>
-          <div class="form-group">
-            <input id="datepicker" type="text" name="arrive" value="" class="form-control" placeholder="30 August 2021">
-          </div>
-        </div>
-        <div class="col-lg-2 col-md-4 col-sm-4 col-xs-4 jasmine-m-30">
-          <h5>Room</h5>
-          <div class="btn-group bootstrap-select">
-            <button type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown" role="button" title="Deluxe Room">
-              <span class="filter-option pull-left">Deluxe Room</span>
-              &nbsp;<span class="bs-caret">
-                <span class="caret"></span>
-              </span>
-            </button>
-            <div class="dropdown-menu open" role="combobox">
-              <ul class="dropdown-menu inner" role="listbox" aria-expanded="false">
-                <li data-original-index="0" class="selected">
-                  <a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="true">
-                    <span class="text">Deluxe Room</span>
-                    <span class="glyphicon glyphicon-ok check-mark">
-                    </span>
-                  </a>
-                </li>
-                <li data-original-index="1">
-                  <a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false">
-                    <span class="text">Royal Room</span>
-                    <span class="glyphicon glyphicon-ok check-mark">
-                    </span>
-                  </a>
-                </li>
-                <li data-original-index="2">
-                  <a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false">
-                    <span class="text">Deluxe Room</span>
-                    <span class="glyphicon glyphicon-ok check-mark">
-                    </span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <select class="selectpicker" tabindex="-98">
-              <option>Deluxe Room</option>
-              <option>Royal Room</option>
-              <option>Family Room</option>
-              <option>Bachelor Room</option>
-            </select>
-          </div>
-        </div>
-        <div class="col-lg-2 col-md-4 col-sm-4 col-xs-4 jasmine-s-30">
-          <h5>Adults</h5>
-          <div class="btn-group bootstrap-select">
-            <button type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown" role="button" title="1 Adult">
-              <span class="filter-option pull-left">1 Adult</span>
-              &nbsp;<span class="bs-caret">
-                <span class="caret">
-                </span>
-              </span>
-            </button>
-            <div class="dropdown-menu open" role="combobox">
-              <ul class="dropdown-menu inner" role="listbox" aria-expanded="false">
-                <li data-original-index="0" class="selected">
-                  <a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="true">
-                    <span class="text">1 Adult</span>
-                    <span class="glyphicon glyphicon-ok check-mark">
-                    </span>
-                  </a>
-                </li>
-                <li data-original-index="1">
-                  <a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false">
-                    <span class="text">2 Adult</span>
-                    <span class="glyphicon glyphicon-ok check-mark">
-                    </span>
-                  </a>
-                </li>
-                <li data-original-index="2">
-                  <a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false">
-                    <span class="text">3 Adult</span>
-                    <span class="glyphicon glyphicon-ok check-mark">
-                    </span>
-                  </a>
-                </li>
-                <li data-original-index="3">
-                  <a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false">
-                    <span class="text">3 Adult</span>
-                    <span class="glyphicon glyphicon-ok check-mark">
-                    </span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <select class="selectpicker" tabindex="-98">
-              <option>1 Adult</option>
-              <option>2 Adult</option>
-              <option>Group of (1-5) Adult</option>
-              <option>Group of (5-10) Adult </option>
-            </select>
-          </div>
-        </div>
-        <div class="rh-clear col-lg-4 col-md-8 co-sm-8 col-xs-8 jasmine-xs-12">
-          <div class="row">
-            <div class="col-md-4 col-sm-6 col-xs-4 jasmine-xs-3">
-              <h5>Budget</h5>
-              <div class="form-group">
-                <input type="text" name="arrive" value="" class="form-control" placeholder="$ 5000">
-              </div>
-            </div>
-            <div class="col-md-8 col-sm-6 col-xs-8 jasmine-xs-9">
-              <a class="jasmine-check-btn pull-right" href="available-rooms.html">Check Availability</a>
-            </div>
-          </div>
-        </div>
-      </form>
-    </div>
-  </div>
-</div>
-
-<!-- Booking Page Begin -->
-
-<div class="jasmine jasmine-100 section-booking">
+<div class="rh rh-100 section-booking">
   <!-- Booking Page Begin -->
   <div class="container">
     <div class="row">
@@ -173,9 +43,9 @@
                 <div class="row">
                   <div class="col-md-12">
                     <div class="rh-datepicker">
-                      <input type="date" id="datepicker">
-                        
-                
+                      <div class="input-daterange" id="datepicker">
+                        <div class="date-picker-inline first hasDatepicker" id="dp1629495495163"><div class="ui-datepicker-inline ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all ui-datepicker-multi-2 ui-datepicker-multi" style="width: 34em; display: block;"><div class="ui-datepicker-group ui-datepicker-group-first"><div class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-left"><a class="ui-datepicker-prev ui-corner-all" data-handler="prev" data-event="click" title="Prev"><span class="ui-icon ui-icon-circle-triangle-w">Prev</span></a><div class="ui-datepicker-title"><span class="ui-datepicker-month">August</span>&nbsp;<span class="ui-datepicker-year">2021</span></div></div><table class="ui-datepicker-calendar"><thead><tr><th scope="col" class="ui-datepicker-week-end"><span title="Sunday">Su</span></th><th scope="col"><span title="Monday">Mo</span></th><th scope="col"><span title="Tuesday">Tu</span></th><th scope="col"><span title="Wednesday">We</span></th><th scope="col"><span title="Thursday">Th</span></th><th scope="col"><span title="Friday">Fr</span></th><th scope="col" class="ui-datepicker-week-end"><span title="Saturday">Sa</span></th></tr></thead><tbody><tr><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="7" data-year="2021"><a class="ui-state-default" href="#">1</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2021"><a class="ui-state-default" href="#">2</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2021"><a class="ui-state-default" href="#">3</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2021"><a class="ui-state-default" href="#">4</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2021"><a class="ui-state-default" href="#">5</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2021"><a class="ui-state-default" href="#">6</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="7" data-year="2021"><a class="ui-state-default" href="#">7</a></td></tr><tr><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="7" data-year="2021"><a class="ui-state-default" href="#">8</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2021"><a class="ui-state-default" href="#">9</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2021"><a class="ui-state-default" href="#">10</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2021"><a class="ui-state-default" href="#">11</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2021"><a class="ui-state-default" href="#">12</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2021"><a class="ui-state-default" href="#">13</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="7" data-year="2021"><a class="ui-state-default" href="#">14</a></td></tr><tr><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="7" data-year="2021"><a class="ui-state-default" href="#">15</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2021"><a class="ui-state-default" href="#">16</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2021"><a class="ui-state-default" href="#">17</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2021"><a class="ui-state-default" href="#">18</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2021"><a class="ui-state-default" href="#">19</a></td><td class=" ui-datepicker-days-cell-over  ui-datepicker-current-day ui-datepicker-today" data-handler="selectDay" data-event="click" data-month="7" data-year="2021"><a class="ui-state-default ui-state-highlight ui-state-active" href="#">20</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="7" data-year="2021"><a class="ui-state-default" href="#">21</a></td></tr><tr><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="7" data-year="2021"><a class="ui-state-default" href="#">22</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2021"><a class="ui-state-default" href="#">23</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2021"><a class="ui-state-default" href="#">24</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2021"><a class="ui-state-default" href="#">25</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2021"><a class="ui-state-default" href="#">26</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2021"><a class="ui-state-default" href="#">27</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="7" data-year="2021"><a class="ui-state-default" href="#">28</a></td></tr><tr><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="7" data-year="2021"><a class="ui-state-default" href="#">29</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2021"><a class="ui-state-default" href="#">30</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2021"><a class="ui-state-default" href="#">31</a></td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td></tr></tbody></table></div><div class="ui-datepicker-group ui-datepicker-group-last"><div class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-right"><a class="ui-datepicker-next ui-corner-all" data-handler="next" data-event="click" title="Next"><span class="ui-icon ui-icon-circle-triangle-e">Next</span></a><div class="ui-datepicker-title"><span class="ui-datepicker-month">September</span>&nbsp;<span class="ui-datepicker-year">2021</span></div></div><table class="ui-datepicker-calendar"><thead><tr><th scope="col" class="ui-datepicker-week-end"><span title="Sunday">Su</span></th><th scope="col"><span title="Monday">Mo</span></th><th scope="col"><span title="Tuesday">Tu</span></th><th scope="col"><span title="Wednesday">We</span></th><th scope="col"><span title="Thursday">Th</span></th><th scope="col"><span title="Friday">Fr</span></th><th scope="col" class="ui-datepicker-week-end"><span title="Saturday">Sa</span></th></tr></thead><tbody><tr><td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" " data-handler="selectDay" data-event="click" data-month="8" data-year="2021"><a class="ui-state-default" href="#">1</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="8" data-year="2021"><a class="ui-state-default" href="#">2</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="8" data-year="2021"><a class="ui-state-default" href="#">3</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="8" data-year="2021"><a class="ui-state-default" href="#">4</a></td></tr><tr><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="8" data-year="2021"><a class="ui-state-default" href="#">5</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="8" data-year="2021"><a class="ui-state-default" href="#">6</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="8" data-year="2021"><a class="ui-state-default" href="#">7</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="8" data-year="2021"><a class="ui-state-default" href="#">8</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="8" data-year="2021"><a class="ui-state-default" href="#">9</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="8" data-year="2021"><a class="ui-state-default" href="#">10</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="8" data-year="2021"><a class="ui-state-default" href="#">11</a></td></tr><tr><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="8" data-year="2021"><a class="ui-state-default" href="#">12</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="8" data-year="2021"><a class="ui-state-default" href="#">13</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="8" data-year="2021"><a class="ui-state-default" href="#">14</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="8" data-year="2021"><a class="ui-state-default" href="#">15</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="8" data-year="2021"><a class="ui-state-default" href="#">16</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="8" data-year="2021"><a class="ui-state-default" href="#">17</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="8" data-year="2021"><a class="ui-state-default" href="#">18</a></td></tr><tr><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="8" data-year="2021"><a class="ui-state-default" href="#">19</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="8" data-year="2021"><a class="ui-state-default" href="#">20</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="8" data-year="2021"><a class="ui-state-default" href="#">21</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="8" data-year="2021"><a class="ui-state-default" href="#">22</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="8" data-year="2021"><a class="ui-state-default" href="#">23</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="8" data-year="2021"><a class="ui-state-default" href="#">24</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="8" data-year="2021"><a class="ui-state-default" href="#">25</a></td></tr><tr><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="8" data-year="2021"><a class="ui-state-default" href="#">26</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="8" data-year="2021"><a class="ui-state-default" href="#">27</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="8" data-year="2021"><a class="ui-state-default" href="#">28</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="8" data-year="2021"><a class="ui-state-default" href="#">29</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="8" data-year="2021"><a class="ui-state-default" href="#">30</a></td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td></tr></tbody></table></div><div class="ui-datepicker-row-break"></div></div></div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -183,7 +53,7 @@
               <div class="col-lg-12">
 
                 <!-- Check Availability Begin -->
-                <div class="rh rh-100 check-availability rh-check-availability select-list">
+                <section class="rh rh-100 check-availability rh-check-availability select-list">
                   <div class="container">
                     <div class="row">
                       <div class="col-lg-3 col-md-3 co-sm-3 col-xs-6 rh-xs-12">
@@ -223,7 +93,7 @@
                       </div>
                     </div>
                   </div>
-                </div>
+                </section>
                 <!-- Check Availability Close -->
               </div>
             </div>
@@ -235,11 +105,11 @@
           <!-- Form Step 2 -->
           <fieldset>
             <!-- Featured Rooms Begin -->
-            <section class="jasmine rh-featured-rooms rh-booking-rooms">
+            <section class="rh rh-featured-rooms rh-booking-rooms">
               <div class="row">
                 <!-- Featured Rooms Grid Box -->
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                  <div class="jasmine rh-feature-box">
+                  <div class="rh rh-feature-box">
                     <div class="rh-img">
                       <img src="images/feature/feature_1.jpg" alt="feature_1">
                       <a href="single-rooms.html"></a>
@@ -256,7 +126,7 @@
                         </ul>
                         <span><a href="javascript:;">7 Reviews</a></span>
                       </div>
-                      <div class="jasmine">
+                      <div class="rh">
                         <i class="fa fa-map-marker" aria-hidden="true"></i>
                         <p>2600 Benjamin Franklin Pkwy, Philadelphia, PA 19130, USA</p>
                       </div>
@@ -264,7 +134,7 @@
                   </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                  <div class="jasmine rh-feature-box">
+                  <div class="rh rh-feature-box">
                     <div class="rh-img">
                       <img src="images/feature/feature_2.jpg" alt="feature_2">
                       <a href="single-rooms.html"></a>
@@ -281,7 +151,7 @@
                         </ul>
                         <span><a href="javascript:;">15 Reviews</a></span>
                       </div>
-                      <div class="jasmine">
+                      <div class="rh">
                         <i class="fa fa-map-marker" aria-hidden="true"></i>
                         <p>2600 Benjamin Franklin Pkwy, Philadelphia, PA 19130, USA</p>
                       </div>
@@ -289,7 +159,7 @@
                   </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                  <div class="jasmine rh-feature-box">
+                  <div class="rh rh-feature-box">
                     <div class="rh-img">
                       <img src="images/feature/feature_3.jpg" alt="feature_3">
                       <a href="single-rooms.html"></a>
@@ -306,7 +176,7 @@
                         </ul>
                         <span><a href="javascript:;">14 Reviews</a></span>
                       </div>
-                      <div class="jasmine">
+                      <div class="rh">
                         <i class="fa fa-map-marker" aria-hidden="true"></i>
                         <p>2600 Benjamin Franklin Pkwy, Philadelphia, PA 19130, USA</p>
                       </div>
@@ -325,7 +195,7 @@
           <!-- Form Step 2 -->
           <!-- Form Step 3 -->
           <fieldset>
-            <div class="jasmine rh-reservation-form">
+            <div class="rh rh-reservation-form">
               <div class="row">
                 <div class="col-md-4 col-sm-6 col-xs-6 rh-xs-12">
                   <div class="form-group">
@@ -393,264 +263,3 @@
   </div>
   <!-- Booking Page Close -->
 </div>
-<div class="container">
-  <div class="row">
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 form-wizard">
-      <!-- Form Wizard -->
-      <form action="#" method="post">
-        <!-- Form progress -->
-        <div class="form-wizard-steps form-wizard-tolal-steps-4">
-          <div class="form-wizard-progress">
-            <div class="form-wizard-progress-line" data-now-value="12.25" data-number-of-steps="4" style="width: 12.25%;"></div>
-          </div>
-          <!-- Step 1 -->
-          <div class="form-wizard-step active">
-            <div class="form-wizard-step-icon"><i class="fa fa-calendar" aria-hidden="true"></i></div>
-            <p>Choose Your Date</p>
-          </div>
-          <!-- Step 1 -->
-          <!-- Step 2 -->
-          <div class="form-wizard-step">
-            <div class="form-wizard-step-icon"><i class="fa fa-building-o" aria-hidden="true"></i></div>
-            <p>Choose Your Room</p>
-          </div>
-          <!-- Step 2 -->
-          <!-- Step 3 -->
-          <div class="form-wizard-step">
-            <div class="form-wizard-step-icon"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></div>
-            <p>Reservation</p>
-          </div>
-          <!-- Step 3 -->
-          <!-- Step 4 -->
-          <div class="form-wizard-step">
-            <div class="form-wizard-step-icon"><i class="fa fa-check" aria-hidden="true"></i></div>
-            <p>Confirmation</p>
-          </div>
-          <!-- Step 4 -->
-        </div>
-        <!-- Form progress -->
-        <!-- Form Step 1 -->
-        <fieldset style="display: block;">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="row">
-                <div class="col-md-12">
-                  <div class="rh-datepicker">
-                    <input type="date" id="datepicker">
-                    
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-12">
-
-              <!-- Check Availability Begin -->
-              <section class="jasmine jasmine-100 check-availability rh-check-availability select-list">
-                <div class="container">
-                  <div class="row">
-                    <div class="col-lg-3 col-md-3 co-sm-3 col-xs-6 jasmine-xs-12">
-                      <h5>Room</h5>
-                      <div class="btn-group bootstrap-select">
-                        <button type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown" role="button" title="Deluxe Room"><span class="filter-option pull-left">Deluxe Room</span>&nbsp;<span class="bs-caret"><span class="caret"></span></span></button><div class="dropdown-menu open" role="combobox"><ul class="dropdown-menu inner" role="listbox" aria-expanded="false"><li data-original-index="0" class="selected"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="true"><span class="text">Deluxe Room</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="1"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">Royal Room</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="2"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">Deluxe Room</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li></ul></div><select class="selectpicker" tabindex="-98">
-                          <option>Deluxe Room</option>
-                          <option>Royal Room</option>
-                          <option>Deluxe Room</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="col-lg-3 col-md-3 co-sm-3 col-xs-6 jasmine-xs-12">
-                      <h5 class="fw-x15">Adults</h5>
-                      <div class="btn-group bootstrap-select">
-                        <button type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown" role="button" title="1 Adult"><span class="filter-option pull-left">1 Adult</span>&nbsp;<span class="bs-caret"><span class="caret"></span></span></button><div class="dropdown-menu open" role="combobox"><ul class="dropdown-menu inner" role="listbox" aria-expanded="false"><li data-original-index="0" class="selected"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="true"><span class="text">1 Adult</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="1"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">2 Adult</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="2"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">3 Adult</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="3"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">3 Adult</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li></ul></div><select class="selectpicker" tabindex="-98">
-                          <option>1 Adult</option>
-                          <option>2 Adult</option>
-                          <option>3 Adult</option>
-                          <option>3 Adult</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="col-lg-3 col-md-3 co-sm-3 col-xs-6 jasmine-xs-12">
-                      <h5 class="fw-15">Children</h5>
-                      <div class="btn-group bootstrap-select">
-                        <button type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown" role="button" title="1"><span class="filter-option pull-left">1</span>&nbsp;<span class="bs-caret"><span class="caret"></span></span></button><div class="dropdown-menu open" role="combobox"><ul class="dropdown-menu inner" role="listbox" aria-expanded="false"><li data-original-index="0" class="selected"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="true"><span class="text">1</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="1"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">2</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="2"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">3</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="3"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">3</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li></ul></div><select class="selectpicker" tabindex="-98">
-                          <option>1</option>
-                          <option>2</option>
-                          <option>3</option>
-                          <option>3</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="rh-clear col-lg-3 col-md-3 co-sm-3 col-xs-6 jasmine-xs-12">
-                      <a class="jasmine-check-btn pull-right" href="javascript:;">Check Availability</a>
-                    </div>
-                  </div>
-                </div>
-              </section>
-              <!-- Check Availability Close -->
-            </div>
-          </div>
-          <div class="form-wizard-buttons">
-            <button type="button" class="btn btn-next">Next</button>
-          </div>
-        </fieldset>
-        <!-- Form Step 1 -->
-        <!-- Form Step 2 -->
-        <fieldset>
-          <!-- Featured Rooms Begin -->
-          <section class="jasmine rh-featured-rooms rh-booking-rooms">
-            <div class="row">
-              <!-- Featured Rooms Grid Box -->
-              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                <div class="jasmine rh-feature-box">
-                  <div class="rh-img">
-                    <img src="images/feature/feature_1.jpg" alt="feature_1">
-                    <a href="single-rooms.html"></a>
-                  </div>
-                  <div class="feature-detail">
-                    <h4><a href="single-rooms.html">Luxury with ultra superior room</a></h4>
-                    <div class="rating-star">
-                      <ul>
-                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                      </ul>
-                      <span><a href="javascript:;">7 Reviews</a></span>
-                    </div>
-                    <div class="jasmine">
-                      <i class="fa fa-map-marker" aria-hidden="true"></i>
-                      <p>2600 Benjamin Franklin Pkwy, Philadelphia, PA 19130, USA</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                <div class="jasmine rh-feature-box">
-                  <div class="rh-img">
-                    <img src="images/feature/feature_2.jpg" alt="feature_2">
-                    <a href="single-rooms.html"></a>
-                  </div>
-                  <div class="feature-detail">
-                    <h4><a href="single-rooms.html">Classic Room In 5 Star Hotel</a></h4>
-                    <div class="rating-star">
-                      <ul>
-                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                      </ul>
-                      <span><a href="javascript:;">15 Reviews</a></span>
-                    </div>
-                    <div class="jasmine">
-                      <i class="fa fa-map-marker" aria-hidden="true"></i>
-                      <p>2600 Benjamin Franklin Pkwy, Philadelphia, PA 19130, USA</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                <div class="jasmine rh-feature-box">
-                  <div class="rh-img">
-                    <img src="images/feature/feature_3.jpg" alt="feature_3">
-                    <a href="single-rooms.html"></a>
-                  </div>
-                  <div class="feature-detail">
-                    <h4><a href="single-rooms.html">Corinthia Hotel Lisboa &amp; Spa</a></h4>
-                    <div class="rating-star">
-                      <ul>
-                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                      </ul>
-                      <span><a href="javascript:;">14 Reviews</a></span>
-                    </div>
-                    <div class="jasmine">
-                      <i class="fa fa-map-marker" aria-hidden="true"></i>
-                      <p>2600 Benjamin Franklin Pkwy, Philadelphia, PA 19130, USA</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-          <!-- Featured Rooms Close -->
-
-          <div class="form-wizard-buttons">
-            <button type="button" class="btn btn-previous">Previous</button>
-            <button type="button" class="btn btn-next">Next</button>
-          </div>
-        </fieldset>
-        <!-- Form Step 2 -->
-        <!-- Form Step 3 -->
-        <fieldset>
-          <div class="jasmine rh-reservation-form">
-            <div class="row">
-              <div class="col-md-4 col-sm-6 col-xs-6 jasmine-xs-12">
-                <div class="form-group">
-                  <input type="text" class="form-control" placeholder="First Name /">
-                </div>
-              </div>
-              <div class="col-md-4 col-sm-6 col-xs-6 jasmine-xs-12">
-                <div class="form-group">
-                  <input type="text" class="form-control" placeholder="Last Name">
-                </div>
-              </div>
-              <div class="col-md-4 col-sm-6 col-xs-6 jasmine-xs-12">
-                <div class="form-group">
-                  <input type="email" class="form-control" placeholder="Email">
-                </div>
-              </div>
-              <div class="col-md-4 col-sm-6 col-xs-6 jasmine-xs-12">
-                <div class="form-group">
-                  <input type="text" class="form-control" placeholder="Phone">
-                </div>
-              </div>
-              <div class="col-md-4 col-sm-6 col-xs-6 jasmine-xs-12">
-                <div class="form-group">
-                  <input type="text" class="form-control" placeholder="City">
-                </div>
-              </div>
-              <div class="col-md-4 col-sm-6 col-xs-6 jasmine-xs-12">
-                <div class="form-group">
-                  <input type="text" class="form-control" placeholder="Address">
-                </div>
-              </div>
-              <div class="col-md-12">
-                <div class="form-group">
-                  <textarea cols="12" rows="10" class="form-control" placeholder="Special Requirements"></textarea>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="form-wizard-buttons">
-            <div class="">
-
-            </div>
-            <button type="button" class="btn btn-previous">Previous</button>
-            <button type="button" class="btn btn-next">Next</button>
-          </div>
-        </fieldset>
-        <!-- Form Step 3 -->
-        <!-- Form Step 4 -->
-        <fieldset>
-          <div class="rh-reservation-complate">
-            <h4>Reservation Complete!</h4>
-            <p>Details of your reservation request was sent to your email </p>
-            <p>For more information you can contact us via <a href="contact.html">contact form</a> of website</p>
-          </div>
-          <div class="form-wizard-buttons">
-            <button type="button" class="btn btn-previous">Previous</button>
-            <button type="submit" class="btn btn-submit">Done</button>
-          </div>
-        </fieldset>
-        <!-- Form Step 4 -->
-      </form>
-      <!-- Form Wizard -->
-    </div>
-  </div>
-</div>
--->

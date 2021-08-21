@@ -7,10 +7,10 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { PaymentComponent } from './payment/payment.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpClientModule} from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { AuthGuard } from './guards';
-import { AlertService, AuthenticationService, UserService } from './services';
+import { AlertService, AuthenticationService } from './services';
 import { NgAlertModule } from '@theo4u/ng-alert';
 import { appRoutes } from './app-routing.module';
 import { RegisterComponent } from './register';
@@ -18,7 +18,14 @@ import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { ContactComponent } from './contact/contact.component';
 import { BookingComponent } from './booking/booking.component';  
-import { ErrorInterceptor, fakeBackendProvider, JwtInterceptor } from './helpers';
+
+import { UserprofileComponent } from './userprofile/userprofile.component';
+import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
+import { VerifyemailComponent } from './verifyemail/verifyemail.component';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireModule } from '@angular/fire';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -30,6 +37,9 @@ import { ErrorInterceptor, fakeBackendProvider, JwtInterceptor } from './helpers
     PaymentComponent,
     ContactComponent,
     BookingComponent,
+    UserprofileComponent,
+    ForgotpasswordComponent,
+    VerifyemailComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,7 +50,10 @@ import { ErrorInterceptor, fakeBackendProvider, JwtInterceptor } from './helpers
     NgAlertModule,
     HttpClientModule,
     NgxUsefulSwiperModule,
-    SlickCarouselModule  
+    SlickCarouselModule,
+    AngularFireAuthModule,
+    AngularFirestoreModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig)
 
   ],
   exports: [RouterModule
@@ -49,11 +62,7 @@ import { ErrorInterceptor, fakeBackendProvider, JwtInterceptor } from './helpers
   providers: [
     AuthGuard,
     AlertService,
-    AuthenticationService,
-    UserService,
-    fakeBackendProvider,
-    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
-    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+    AuthenticationService
     
   ],
   bootstrap: [AppComponent]
