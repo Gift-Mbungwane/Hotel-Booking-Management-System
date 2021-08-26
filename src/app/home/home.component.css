@@ -76,10 +76,13 @@
     color: #000;
   }
 
-.nav-tabs li a {
+.nav-tabs li {
   color: #777;
 }
 
+a {
+  color: #fff;
+}
 
 .navbar {
   font-family: Montserrat, sans-serif;

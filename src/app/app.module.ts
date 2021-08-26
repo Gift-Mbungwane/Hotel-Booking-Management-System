@@ -17,7 +17,7 @@ import { RegisterComponent } from './register';
 import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { ContactComponent } from './contact/contact.component';
-import { BookingComponent } from './booking/booking.component';  
+import { BookingComponent } from './booking/booking.component';
 
 import { UserprofileComponent } from './userprofile/userprofile.component';
 import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
@@ -26,6 +26,7 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
+import { RoomsComponent } from './rooms/rooms.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { environment } from '../environments/environment';
     UserprofileComponent,
     ForgotpasswordComponent,
     VerifyemailComponent,
+    RoomsComponent,
   ],
   imports: [
     BrowserModule,
@@ -48,6 +50,7 @@ import { environment } from '../environments/environment';
     FormsModule,
     ReactiveFormsModule,
     NgAlertModule,
+
     HttpClientModule,
     NgxUsefulSwiperModule,
     SlickCarouselModule,
@@ -62,7 +65,8 @@ import { environment } from '../environments/environment';
   providers: [
     AuthGuard,
     AlertService,
-    AuthenticationService
+    AuthenticationService,
+    
     
   ],
   bootstrap: [AppComponent]

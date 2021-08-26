@@ -11,7 +11,7 @@ export class HomeComponent implements OnInit {
 
   payment: PaymentComponent;
 
-  constructor(private router: Router) { }
+  constructor(public router: Router) { }
 
   ngOnInit(): void {
     this.loadPayment();
