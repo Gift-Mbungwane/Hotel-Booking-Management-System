@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -13,6 +14,7 @@ import { AuthGuard } from './guards';
 import { AlertService, AuthenticationService } from './services';
 import { NgAlertModule } from '@theo4u/ng-alert';
 import { appRoutes } from './app-routing.module';
+import { MatDialogActions, MatDialogClose, MatDialogContent, MatDialogModule, MatDialogTitle, MAT_DIALOG_DEFAULT_OPTIONS } from '@angular/material/dialog'; 
 import { RegisterComponent } from './register';
 import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
@@ -27,6 +29,9 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
 import { RoomsComponent } from './rooms/rooms.component';
+import { RoomDetailsComponent } from './room-details/room-details.component';
+
+
 
 @NgModule({
   declarations: [
@@ -42,14 +47,19 @@ import { RoomsComponent } from './rooms/rooms.component';
     ForgotpasswordComponent,
     VerifyemailComponent,
     RoomsComponent,
+    RoomDetailsComponent,
+    
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     RouterModule.forRoot(appRoutes),
     FormsModule,
     ReactiveFormsModule,
     NgAlertModule,
+    MatDialogModule,
+
 
     HttpClientModule,
     NgxUsefulSwiperModule,
@@ -59,14 +69,15 @@ import { RoomsComponent } from './rooms/rooms.component';
     AngularFireModule.initializeApp(environment.firebaseConfig)
 
   ],
-  exports: [RouterModule
+  exports: [RouterModule,
+
   ],
 
   providers: [
     AuthGuard,
     AlertService,
     AuthenticationService,
-    
+    { provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: { hasBackdrop: false } }
     
   ],
   bootstrap: [AppComponent]

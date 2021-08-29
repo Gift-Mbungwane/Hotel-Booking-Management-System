@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { PaymentComponent } from './payment/payment.component';
 import { RegisterComponent } from './register';
+import { RoomDetailsComponent } from './room-details/room-details.component';
 import { RoomsComponent } from './rooms/rooms.component';
 import { UserprofileComponent } from './userprofile/userprofile.component';
 import { VerifyemailComponent } from './verifyemail/verifyemail.component';
@@ -23,7 +24,8 @@ export const appRoutes: Routes = [
   { path: 'home', component: HomeComponent,  },
   { path: 'contact', component: ContactComponent },
   { path: 'about', component: AboutComponent },
-  { path: 'booking', component: BookingComponent,canActivate: [AuthGuard]},
+  { path: 'booking', component: BookingComponent, canActivate: [AuthGuard] },
+  { path: 'room-details', component: RoomDetailsComponent },
   { path: 'rooms', component: RoomsComponent },
   { path: 'payment', component: PaymentComponent, canActivate: [AuthGuard] },
   { path: 'forgotpassword', component: ForgotpasswordComponent },

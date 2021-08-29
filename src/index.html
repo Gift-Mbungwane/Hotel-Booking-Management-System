@@ -4,21 +4,37 @@
   <meta charset="utf-8" />
   <title>HotelBookingManagementSystem</title>
   <base href="/">
+  <meta name="format-detection" content="telephone=no" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <link href="assets/jquery-ui-date.css" rel="stylesheet" />
-  <link href="assets/font-awesome.min.css" rel="stylesheet" />
+  <link href="assets/css/uikit.min.css" rel="stylesheet" />
+  <link href="assets/css/style2.css" rel="stylesheet" />
+  <link href="assets/css/tiny-date-picker.min.css" rel="stylesheet" />
+  <link href="assets/css/media-query.css" rel="stylesheet" />
+  <link href="assets/css/font-awesome2.min.css" rel="stylesheet" />
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="assets/js/date-config.js"></script>
+  <script src="assets/js/jquery.barrating.js"></script>
+  <script src="assets/js/jquery.gmap.min.js"></script>
+  <script src="assets/js/jquery.js"></script>
+  <script src="assets/js/jquery.parallax.min.js"></script>
+  <script src="assets/js/rating-config.js"></script>
+  <script src="assets/js/template-config.js"></script>
+  <script src="assets/js/tiny-date-picker.min.js"></script>
+  <script src="assets/js/uikit-icons.min.js"></script>
+  <script src="assets/js/uikit.min.js"></script>
   <script>
-    $(function () {
+    (function () {
       $("#datepicker").datepicker();
     });
   </script>
@@ -69,34 +85,8 @@
   </style>
 </head>
 <body>
-  <app-root><div class="loading" /></app-root>
-  <script>
-    var slideIndex = 1;
-    showSlides(slideIndex);
 
-    function plusSlides(n) {
-      showSlides(slideIndex += n);
-    }
+<app-root><div class="loading" /></app-root>
 
-    function currentSlide(n) {
-      showSlides(slideIndex = n);
-    }
-
-    function showSlides(n) {
-      var i;
-      var slides = document.getElementsByClassName("mySlides");
-      var dots = document.getElementsByClassName("dot");
-      if (n > slides.length) { slideIndex = 1 }
-      if (n < 1) { slideIndex = slides.length }
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
-      for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-      }
-      slides[slideIndex - 1].style.display = "block";
-      dots[slideIndex - 1].className += " active";
-    }
-  </script>
 </body>
 </html>
