@@ -30,6 +30,9 @@ import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
 import { RoomsComponent } from './rooms/rooms.component';
 import { RoomDetailsComponent } from './room-details/room-details.component';
+import { DoubleroomComponent } from './doubleroom/doubleroom.component';
+import { PremiereroomComponent } from './premiereroom/premiereroom.component';
+import { DeluxeroomComponent } from './deluxeroom/deluxeroom.component';
 
 
 
@@ -48,6 +51,9 @@ import { RoomDetailsComponent } from './room-details/room-details.component';
     VerifyemailComponent,
     RoomsComponent,
     RoomDetailsComponent,
+    DoubleroomComponent,
+    PremiereroomComponent,
+    DeluxeroomComponent,
     
   ],
   imports: [
