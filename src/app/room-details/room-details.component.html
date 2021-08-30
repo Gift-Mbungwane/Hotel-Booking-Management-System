@@ -78,8 +78,8 @@
                 </ul>
               </div>
             </div>
-          </li><!-- tab content #1 end -->    
-          
+          </li><!-- tab content #1 end -->
+
           <li>
             <!-- tab content #3 (booking form) -->
             <h5>Booking Form</h5>
@@ -98,21 +98,23 @@
                     </div>
                   </div>
                 </div>
-                <div class="uk-margin">
+                <div class="uk-margin" mat-date-range-input [formGroup]="range" rangePicker>
                   <div class="uk-form-controls">
-                    <div class="uk-inline">
+                    <div class="uk-inline"  >
                       <label class="uk-form-label">Arrival</label>
                       <span class="uk-form-icon" data-uk-icon="icon: calendar"></span>
-                      <input class="uk-input booking-arrival uk-border-rounded" type="text" placeholder="m/dd/yyyy">
+                      <input mat-datepicker-toggle formControlName="start" #picker1 placeholder="Arrival date" matDatepicker>
+                      <div mat-error *ngIf="range.controls.start.hasError('matStartDateInvalid') && picker1">Invalid start date</div>
                     </div>
                   </div>
                 </div>
-                <div class="uk-margin">
+                <div class="uk-margin" mat-date-range-input [formGroup]="range" rangePicker>
                   <div class="uk-form-controls">
-                    <div class="uk-inline">
+                    <div class="uk-inline"  >
                       <label class="uk-form-label">Departure</label>
                       <span class="uk-form-icon" data-uk-icon="icon: calendar"></span>
-                      <input class="uk-input booking-departure uk-border-rounded" type="text" placeholder="m/dd/yyyy">
+                      <input mat-datepicker-toggle formControlName="end" #picker2 placeholder="Departure date" matDatepicker>
+                      <div mat-error *ngIf="range.controls.end.hasError('matEndDateInvalid') && picker2">Invalid end date</div>
                     </div>
                   </div>
                 </div>
@@ -138,13 +140,13 @@
                       <option *ngFor="let room of rooms" (change)="changeRooms($event)" [ngValue]="room">{{room}}</option>
                     </select>
                     <div *ngIf="bookingForm.get('roomType').invalid && bookingForm.get('roomType').touched">
-                      <small *ngIf="bookingForm.get('roomType').errors?.required" class="text-danger" >Please enter your desired room</small>
+                      <small *ngIf="bookingForm.get('roomType').errors?.required" class="text-danger">Please enter your desired room</small>
                     </div>
                   </div>
                 </div>
                 <div>
                   <label class="uk-form-label empty-label">&nbsp;</label>
-                  <button class="uk-button uk-width-1-1" [disabled]="!bookingForm.valid" type="submit" >Book Now!</button>
+                  <button class="uk-button uk-width-1-1" mat-raised-button [disabled]="!bookingForm.valid" (click)="openPopup()" type="submit">Book Now!</button>
                 </div>
               </form>
             </div>
@@ -152,7 +154,28 @@
         </ul>
         <!-- tabs content end -->
         <!--Modal-->
+        <div class="modal"
+             tabindex="-1"
+             role="dialog"
+             [ngStyle]="{'display':displayStyle}">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title">GeeksForGeeks</h4>
+              </div>
+              <div class="modal-body">
+                <p>One Stop Solution for all CS problems</p>
 
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger"
+                        (click)="closePopup()">
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
         <!-- related rooms -->
         <div class="impx-other-rooms uk-margin-medium-top">
           <h4 class="uk-margin-bottom uk-heading-line"><span>Other Rooms</span></h4>

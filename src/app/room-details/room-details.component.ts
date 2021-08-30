@@ -1,5 +1,5 @@
 import { Component, Inject, OnInit } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { AuthenticationService } from '../services';
 import { BookingfirebaseService } from '../services/bookingfirebase.service';
 
@@ -20,12 +20,12 @@ export class RoomDetailsComponent implements OnInit {
   isSubmitted = false;
   roomTypeHasError: boolean;
   rooms: any = ['Single', 'Double', 'Primier', 'Deluxe']
-  
+  email: any;
+  range: FormGroup;
 
   constructor(
     public authenticationService: AuthenticationService,
-    private formBuilder: FormBuilder,
-    private bookingService: BookingfirebaseService,
+    public formBuilder: FormBuilder,
     public dialog: MatDialog
   ) { }
 
@@ -57,9 +57,9 @@ export class RoomDetailsComponent implements OnInit {
   onSubmit() {
     this.isSubmitted = true;
     if (!this.bookingForm.valid) {
-      return true;
+      return false;
     } else if (this.bookingForm.valid) {
-      return this.openDialog();
+      return this.openPopup();
     } else {
       alert(JSON.stringify(this.bookingForm.value))
     }
@@ -67,15 +67,32 @@ export class RoomDetailsComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
+    this.range =  new FormGroup({
+      start: new FormControl(),
+      end: new FormControl()
+    });
+
   }
 
-  openDialog() {
-    const dialogRef = this.dialog.open(bookingDialogComponent);
-
+ /* openDialog() {
+    const dialogRef = this.dialog.open(bookingDialogComponent, {
+      width: '550px',
+      data: { email: this.bookingForm.get('email'), rooms: this.bookingForm.get('roomType') }
+    });
+    
     dialogRef.afterClosed().subscribe(result => {
       console.log(`Dialog result: ${result}`);
     });
   }
+  */
+  displayStyle = "none";
 
+  openPopup() {
+    this.displayStyle = "block";
+  }
+  closePopup() {
+    this.displayStyle = "none";
+  }
 
 }
