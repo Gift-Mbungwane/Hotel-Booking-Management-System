@@ -1,5 +1,6 @@
 import { Component, Inject, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { validateTopic } from '../validators/guest.validator';
 import { AuthenticationService } from '../services';
 import { BookingfirebaseService } from '../services/bookingfirebase.service';
 
@@ -19,7 +20,9 @@ export class RoomDetailsComponent implements OnInit {
 
   isSubmitted = false;
   roomTypeHasError: boolean;
-  rooms: any = ['Single', 'Double', 'Primier', 'Deluxe']
+  rooms: any = ['Single', 'Double', 'Primier', 'Deluxe'];
+  guests: any = [1, 2, 3, 4];
+  guestHasError = true;
   email: any;
   range: FormGroup;
 
@@ -31,7 +34,8 @@ export class RoomDetailsComponent implements OnInit {
 
   bookingForm = this.formBuilder.group({
     email: ['', [Validators.required, Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$')]],
-    roomType: ['', [Validators.required]]
+    roomType: ['', [Validators.required]],
+    guests: ['', [Validators.required, validateTopic]]
   });
 
   validateRoomType(value: any) {
@@ -43,8 +47,21 @@ export class RoomDetailsComponent implements OnInit {
     }
   }
 
+  validateTopic(abs: AbstractControl) {
+        const value = abs.value as string;
+      if(value === 'guest') {
+        this.guestHasError = true;
+      } else {
+        this.guestHasError = false;
+      }
+  }
+
   get roomType() {
     return this.bookingForm.get('roomType');
+  }
+
+  get guest() {
+    return this.bookingForm.get('guest');
   }
 
   changeRooms(e) {
