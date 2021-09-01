@@ -23,7 +23,7 @@ export class RoomDetailsComponent implements OnInit {
   rooms: any = ['Single', 'Double', 'Primier', 'Deluxe'];
   guests: any = [1, 2, 3, 4];
   guestHasError = true;
-  email: any;
+  //email: any;
   range: FormGroup;
 
   constructor(
@@ -35,7 +35,9 @@ export class RoomDetailsComponent implements OnInit {
   bookingForm = this.formBuilder.group({
     email: ['', [Validators.required, Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$')]],
     roomType: ['', [Validators.required]],
-    guests: ['', [Validators.required, validateTopic]]
+    guests: ['', [Validators.required, validateTopic]],
+    arrivalDate: ['', [Validators.required]],
+    departureDate: ['', [Validators.required]]
   });
 
   validateRoomType(value: any) {
@@ -47,21 +49,28 @@ export class RoomDetailsComponent implements OnInit {
     }
   }
 
-  validateTopic(abs: AbstractControl) {
-        const value = abs.value as string;
-      if(value === 'guest') {
-        this.guestHasError = true;
-      } else {
-        this.guestHasError = false;
-      }
+  get email() {
+    return this.bookingForm.get('email');
+  } 
+
+  get arrivalDate() {
+    return this.bookingForm.get('arrivalDate');
   }
 
+  get departureDate() {
+    return this.bookingForm.get('departureDate');
+  }
+  
   get roomType() {
     return this.bookingForm.get('roomType');
   }
 
   get guest() {
     return this.bookingForm.get('guest');
+  }
+
+  addCuctomer() {
+    
   }
 
   changeRooms(e) {

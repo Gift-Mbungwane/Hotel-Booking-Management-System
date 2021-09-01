@@ -103,7 +103,7 @@
                     <div class="uk-inline">
                       <label class="uk-form-label">Arrival</label>
                       <span class="uk-form-icon" data-uk-icon="icon: calendar"></span>
-                      <input class="uk-input booking-arrival uk-border-rounded" type="text" placeholder="m/dd/yyyy">
+                      <input formControlName="arrivalDate" class="uk-input booking-arrival uk-border-rounded" type="text" placeholder="m/dd/yyyy">
                     </div>
                   </div>
                 </div>
@@ -112,7 +112,7 @@
                     <div class="uk-inline">
                       <label class="uk-form-label">Departure</label>
                       <span class="uk-form-icon" data-uk-icon="icon: calendar"></span>
-                      <input class="uk-input booking-departure uk-border-rounded" type="text" placeholder="m/dd/yyyy">
+                      <input formControlName="departureDate" class="uk-input booking-departure uk-border-rounded" type="text" placeholder="m/dd/yyyy">
                     </div>
                   </div>
                 </div>
@@ -121,12 +121,12 @@
                     <label class="uk-form-label" for="form-guest-select">Guest</label>
                     <span class="uk-form-icon select-icon" data-uk-icon="icon: users"></span>
                     <select class="uk-select uk-border-rounded" id="form-guest-select" formControlName="guests" >
-                      <option (blur)="validateTopic(guest.value)" (change)="validateTopic(guest.value)" value="guest">Choose number of guest(s)</option>
+                      <option value="guests">Choose number of guest(s)</option>
                       <option *ngFor="let guest of guests" [ngValue]="guest">{{guest}}</option>
                     </select>
                     <div *ngIf="(bookingForm.get('guests').invalid || bookingForm.get('guests').invalid) && bookingForm.get('guests').touched">
                     <small *ngIf="bookingForm.get('guests').errors?.required" class="text-danger" >Guest is required</small>
-                    <small *ngIf="bookingForm.get('guests').errors?.nameMatch" class="text-danger" >Guest is required</small>
+                    <small *ngIf="bookingForm.get('guests').errors?.validTopic" class="text-danger" >Guest is required</small>
                   </div>
                   </div>
                 </div>
@@ -153,6 +153,33 @@
         </ul>
         <!-- tabs content end -->
         <!--Modal-->
+
+        <div class="modal"
+             tabindex="-1"
+             role="dialog"
+             [ngStyle]="{'display':displayStyle}">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title">Customer Details</h4>
+              </div>
+              <div class="modal-body">
+                 <p><span style="font-weight: bold;">Email:</span> {{bookingForm.value.email}}</p>
+                 <p><span style="font-weight: bold;">Arrival Date:</span> {{bookingForm.value.arrivalDate}}</p>
+                 <p><span style="font-weight: bold;">Departure Date:</span> {{bookingForm.value.departureDate}}</p>
+                 <p><span style="font-weight: bold;">Number of Guests:</span> {{bookingForm.value.guests}}</p>
+                 <p><span style="font-weight: bold;">Type of Room:</span> {{bookingForm.value.roomType}}</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" (click)="addCuctomer()">Save</button>
+                <button type="button" class="btn btn-danger"
+                        (click)="closePopup()">
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
 
         <!-- related rooms -->
         <div class="impx-other-rooms uk-margin-medium-top">

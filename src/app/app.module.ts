@@ -26,6 +26,7 @@ import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.compone
 import { VerifyemailComponent } from './verifyemail/verifyemail.component';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
 import { RoomsComponent } from './rooms/rooms.component';
@@ -72,6 +73,7 @@ import { DeluxeroomComponent } from './deluxeroom/deluxeroom.component';
     SlickCarouselModule,
     AngularFireAuthModule,
     AngularFirestoreModule,
+    AngularFireDatabaseModule,
     AngularFireModule.initializeApp(environment.firebaseConfig)
 
   ],

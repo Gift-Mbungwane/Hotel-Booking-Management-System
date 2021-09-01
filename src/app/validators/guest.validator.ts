@@ -1,18 +1,11 @@
 import { ValidatorFn, AbstractControl, ValidationErrors } from "@angular/forms";
-import { ValidationError } from "json-schema";
 
-    export function validateTopic(guest: String): ValidatorFn {
-        return (control: AbstractControl): ValidationErrors | null => {
-            const isValid = control.value === '' || control.value === guest;
-
-            if(isValid) {
+    export function validateTopic(guest: string): ValidatorFn {
+        return (control: AbstractControl): { [key: string]: any } | null => {
+            if ((control.value !== null && control.value === '') || control.value ) {
+                 return {'validTopic': true};
+            }else{
                 return null;
-            }else {
-                return {
-                    nameMatch: {
-                        allowedName: guest
-                    }
-                };
             }
         }
     }
