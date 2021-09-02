@@ -28,6 +28,7 @@
     "bootstrap": "^3.4.1",
     "express": "^4.17.1",
     "firebase": "^8.10.0",
+    "ngx-bootstrap": "^7.0.0",
     "ngx-slick-carousel": "^0.5.1",
     "ngx-useful-swiper": "^10.0.1",
     "path": "^0.12.7",

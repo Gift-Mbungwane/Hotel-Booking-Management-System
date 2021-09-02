@@ -52,7 +52,7 @@ export class BookingComponent implements OnInit {
     }
   }
 
-  createRecord() {
+ /* createRecord() {
     let Record = {};
     Record['Name'] = this.customerFirstName;
     Record['Surname'] = this.customerlastName;
@@ -84,7 +84,7 @@ export class BookingComponent implements OnInit {
     }).catch(error => {
       console.log(error);
     });
-  }
+  }*/
 
   ngOnInit(): void {
   }

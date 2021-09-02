@@ -21,6 +21,8 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { ContactComponent } from './contact/contact.component';
 import { BookingComponent } from './booking/booking.component';
 
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+
 import { UserprofileComponent } from './userprofile/userprofile.component';
 import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
 import { VerifyemailComponent } from './verifyemail/verifyemail.component';
@@ -66,6 +68,8 @@ import { DeluxeroomComponent } from './deluxeroom/deluxeroom.component';
     ReactiveFormsModule,
     NgAlertModule,
     MatDialogModule,
+
+    BsDatepickerModule.forRoot(),
 
 
     HttpClientModule,

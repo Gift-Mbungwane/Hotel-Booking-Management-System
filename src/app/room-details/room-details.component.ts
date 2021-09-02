@@ -29,7 +29,8 @@ export class RoomDetailsComponent implements OnInit {
   constructor(
     public authenticationService: AuthenticationService,
     public formBuilder: FormBuilder,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    public bookinService: BookingfirebaseService
   ) { }
 
   bookingForm = this.formBuilder.group({
@@ -70,7 +71,7 @@ export class RoomDetailsComponent implements OnInit {
   }
 
   addCuctomer() {
-    
+    this.bookinService.addCuctomer(this.bookingForm.value);
   }
 
   changeRooms(e) {
