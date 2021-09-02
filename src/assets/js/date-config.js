@@ -1,4 +1,4 @@
-//var TinyDatePicker = DateRangePicker.TinyDatePicker;
+var TinyDatePicker = DateRangePicker.TinyDatePicker;
 //var dpModal = TinyDatePicker('.date-example');
 
 var d_arrival = TinyDatePicker('.booking-arrival', {
