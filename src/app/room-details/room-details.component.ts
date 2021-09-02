@@ -37,7 +37,7 @@ export class RoomDetailsComponent implements OnInit {
     email: ['', [Validators.required, Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$')]],
     roomType: ['', [Validators.required]],
     guests: ['', [Validators.required, validateTopic]],
-    arrivalDate: ['', [Validators.required]],
+    arrivalDate: [JSON.stringify, [Validators.required]],
     departureDate: ['', [Validators.required]]
   });
 

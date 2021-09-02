@@ -98,17 +98,17 @@
                     </div>
                   </div>
                 </div>
-                <!--<div class="uk-margin">
+                <div class="uk-margin">
                   <div class="uk-form-controls">
                     <div class="uk-inline">
                       <label class="uk-form-label">Arrival</label>
                       <span class="uk-form-icon" data-uk-icon="icon: calendar"></span>
-                      <input formControlName="arrivalDate" class="uk-input booking-arrival uk-border-rounded" type="text" placeholder="m/dd/yyyy">
+                      <input formControlName="arrivalDate" name="arrivalDate" bsDatepicker class="uk-input booking-arrival uk-border-rounded" type="text"  [bsConfig]="{ dateInputFormat: 'DD/MM/YYYY' }" placeholder="m/dd/yyyy">
                     </div>
                   </div>
-                </div> --->
+                </div> 
 
-                  <div class="container">
+                  <!--<div class="container">
                     <div class="row">
                       <div class="col-xs-12 col-12 col-md-4 form-group">
                         <input formControlName="arrivalDate"
@@ -119,14 +119,14 @@
                               class="form-control">
                       </div>
                  </div>
-                </div>
+                </div>--->
 
                 <div class="uk-margin">
                   <div class="uk-form-controls">
                     <div class="uk-inline">
                       <label class="uk-form-label">Departure</label>
                       <span class="uk-form-icon" data-uk-icon="icon: calendar"></span>
-                      <input formControlName="departureDate" class="uk-input booking-departure uk-border-rounded" type="text" placeholder="m/dd/yyyy">
+                      <input formControlName="departureDate" name="departureDate" bsDatepicker class="uk-input booking-departure uk-border-rounded" type="text"  [bsConfig]="{ dateInputFormat: 'DD/MM/YYYY' }" placeholder="m/dd/yyyy">
                     </div>
                   </div>
                 </div>
@@ -179,8 +179,8 @@
               </div>
               <div class="modal-body">
                  <p><span style="font-weight: bold;">Email:</span> {{bookingForm.value.email}}</p>
-                 <p><span style="font-weight: bold;">Arrival Date:</span> {{bookingForm.value.arrivalDate}}</p>
-                 <p><span style="font-weight: bold;">Departure Date:</span> {{bookingForm.value.departureDate}}</p>
+                 <p bsDatepicker><span style="font-weight: bold;">Arrival Date:</span> {{bookingForm.value.arrivalDate}}</p>
+                 <p   bsDatepicker><span style="font-weight: bold;">Departure Date:</span> {{bookingForm.value.departureDate}}</p>
                  <p><span style="font-weight: bold;">Number of Guests:</span> {{bookingForm.value.guests}}</p>
                  <p><span style="font-weight: bold;">Type of Room:</span> {{bookingForm.value.roomType}}</p>
               </div>

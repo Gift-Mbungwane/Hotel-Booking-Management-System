@@ -27,7 +27,7 @@ import { UserprofileComponent } from './userprofile/userprofile.component';
 import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
 import { VerifyemailComponent } from './verifyemail/verifyemail.component';
 import { AngularFireAuthModule } from '@angular/fire/auth';
-import { AngularFirestoreModule } from '@angular/fire/firestore';
+//import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
@@ -73,7 +73,7 @@ import { DeluxeroomComponent } from './deluxeroom/deluxeroom.component';
     NgxUsefulSwiperModule,
     SlickCarouselModule,
     AngularFireAuthModule,
-    AngularFirestoreModule,
+    //AngularFirestoreModule,
     AngularFireDatabaseModule,
     DatepickerModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
