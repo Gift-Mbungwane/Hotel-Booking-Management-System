@@ -21,10 +21,10 @@
                 Live the Wonderous
                 <span class="spano">Life</span>
               </h1>
-              <span class="jasmine-price">From $195 / day</span>
+              <span class="jasmine-price">From $50 / day</span>
             </div>
             <div class="col-lg-3 col-md-3 col-sm-10 col-xs-10">
-              <a class="book-now" href="payment/payment.component.html">Book Now</a>
+              <a class="book-now" [routerLink]="['/room-details']">Book Now</a>
             </div>
 
           </div>
@@ -43,10 +43,10 @@
                 Live the Wonderous
                 <span class="spano">Life</span>
               </h1>
-              <span class="jasmine-price">From $195 / day</span>
+              <span class="jasmine-price">From $80 / day</span>
             </div>
             <div class="col-lg-3 col-md-3 ">
-              <a class="book-now" href="payment/payment.component.html">Book Now</a>
+              <a class="book-now" [routerLink]="['/room-details']">Book Now</a>
             </div>
 
           </div>
@@ -64,10 +64,10 @@
                 Live the Wonderous
                 <span class="spano">Life</span>
               </h1>
-              <span class="jasmine-price">From $195 / day</span>
+              <span class="jasmine-price">From $100 / day</span>
             </div>
             <div class="col-lg-3 col-md-3 ">
-              <a class="book-now" href="payment/payment.component.html">Book Now</a>
+              <a class="book-now" [routerLink]="['/room-details']">Book Now</a>
             </div>
 
           </div>
@@ -85,10 +85,10 @@
                 Live the Wonderous
                 <span class="spano">Life</span>
               </h1>
-              <span class="jasmine-price">From $195 / day</span>
+              <span class="jasmine-price">From $130 / day</span>
             </div>
             <div class="col-lg-3 col-md-3 ">
-              <a class="book-now" [routerLink]="['/payment']" (click)="loadPayment()">Book Now</a>
+              <a class="book-now" [routerLink]="['/room-details']">Book Now</a>
             </div>
 
           </div>
@@ -98,30 +98,32 @@
   </div>
 </div>
 
+
+
 <!--new rooms-->
-<div class="uk-padding  uk-padding-remove-horizontal">
-  <div class="uk-container">
+<div class="uk-padding  uk-padding-remove-horizontal"  *ngFor="let booking of booking" >
+  <div class="uk-container" >
 
     <!-- ROOMS LIST -->
-    <div class="uk-position-relative uk-visible-toggle uk-margin-small-top">
+    <div class="uk-position-relative uk-visible-toggle uk-margin-small-top" >
       <ul class="uk-child-width-1-2@xl uk-child-width-1-2@l uk-child-width-1-2@m uk-child-width-1-1@s data-uk-grid uk-grid-match uk-margin-large-bottom" data-uk-grid>
         <li>
           <!-- room item #1 -->
-          <div class="impx-room-item medium uk-box-shadow-large">
-            <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s" data-uk-grid>
+          <div class="impx-room-item medium uk-box-shadow-large" >
+            <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s" data-uk-grid >
               <div class="uk-card-media-left uk-cover-container uk-position-relative">
                 <canvas width="290" height="180"></canvas>
-                <img src="assets/images/luxury.jpg" alt="" data-uk-cover>
+                <img src='{{booking.payload.doc.data().photoURL}}' alt="" data-uk-cover>
                 <div class="impx-overlay light overlay-squared padding-xwide"></div>
               </div>
-              <div class="uk-card-body uk-position-relative impx-padding-medium">
+              <div class="uk-card-body uk-position-relative impx-padding-medium" >
                 <div class="uk-card-header uk-padding-remove-horizontal">
-                  <h4 class="uk-card-title uk-margin-remove-bottom">Single Room</h4>
+                  <h4 class="uk-card-title uk-margin-remove-bottom" >{{booking.payload.doc.data().name}}</h4>
                   <p class="uk-text-meta uk-margin-remove-top">Subtitle Goes Here </p>
                 </div>
-                <span class="uk-card-badge uk-label bg-color-aqua">from $50/night</span>
-                <ul class="uk-list room-fac">
-                  <li><span class="impx-text-aqua" data-uk-icon="icon: check; ratio: 1;"></span> Beatus in maximarum timore</li>
+                <span class="uk-card-badge uk-label bg-color-aqua">from ${{booking.payload.doc.data().price}}/night</span>
+                <ul class="uk-list room-fac" >
+                  <li><span class="impx-text-aqua" data-uk-icon="icon: check; ratio: 1;"></span> {{booking.payload.doc.data().name}}</li>
                   <li><span class="impx-text-aqua" data-uk-icon="icon: check; ratio: 1;"></span> Oculis Compensabatur</li>
                   <li><span class="impx-text-aqua" data-uk-icon="icon: check; ratio: 1;"></span> Dolorisnos veriusque nihil</li>
                 </ul>
@@ -133,90 +135,7 @@
             </div>
           </div>
         </li><!-- room item #1 end -->
-        <li>
-          <!-- room item #2 -->
-          <div class="impx-room-item medium uk-box-shadow-large">
-            <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s" data-uk-grid>
-              <div class="uk-card-media-left uk-cover-container uk-position-relative">
-                <canvas width="290" height="180"></canvas>
-                <img src="assets/images/luxury.jpg" alt="" data-uk-cover>
-                <div class="impx-overlay light overlay-squared padding-xwide"></div>
-              </div>
-              <div class="uk-card-body uk-position-relative impx-padding-medium">
-                <div class="uk-card-header uk-padding-remove-horizontal">
-                  <h4 class="uk-card-title uk-margin-remove-bottom">Double Room</h4>
-                  <p class="uk-text-meta uk-margin-remove-top">Subtitle Goes Here </p>
-                </div>
-                <span class="uk-card-badge uk-label bg-color-aqua">from $80/night</span>
-                <ul class="uk-list room-fac">
-                  <li><span class="impx-text-aqua" data-uk-icon="icon: check; ratio: 1;"></span> Beatus in maximarum timore</li>
-                  <li><span class="impx-text-aqua" data-uk-icon="icon: check; ratio: 1;"></span> Oculis Compensabatur</li>
-                  <li><span class="impx-text-aqua" data-uk-icon="icon: check; ratio: 1;"></span> Dolorisnos veriusque nihil</li>
-                </ul>
-
-                <div class="uk-card-footer uk-padding-remove-horizontal uk-padding-remove-bottom">
-                  <a [routerLink]="['/double-room']" class="uk-button uk-button-text impx-text-aqua">Read more &raquo;</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </li><!-- room item #2 end -->
-        <li>
-          <!-- room item #3 -->
-          <div class="impx-room-item medium uk-box-shadow-large">
-            <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s" data-uk-grid>
-              <div class="uk-card-body uk-position-relative impx-padding-medium">
-                <div class="uk-card-header uk-padding-remove-horizontal">
-                  <h4 class="uk-card-title uk-margin-remove-bottom">Premiere Room</h4>
-                  <p class="uk-text-meta uk-margin-remove-top">Subtitle Goes Here </p>
-                </div>
-                <span class="uk-card-badge uk-label bg-color-aqua">from $100/night</span>
-                <ul class="uk-list room-fac">
-                  <li><span class="impx-text-aqua" data-uk-icon="icon: check; ratio: 1;"></span> Beatus in maximarum timore</li>
-                  <li><span class="impx-text-aqua" data-uk-icon="icon: check; ratio: 1;"></span> Oculis Compensabatur</li>
-                  <li><span class="impx-text-aqua" data-uk-icon="icon: check; ratio: 1;"></span> Dolorisnos veriusque nihil</li>
-                </ul>
-
-                <div class="uk-card-footer uk-padding-remove-horizontal uk-padding-remove-bottom">
-                  <a [routerLink]="['/premiere-room']" class="uk-button uk-button-text impx-text-aqua">Read more &raquo;</a>
-                </div>
-              </div>
-              <div class="uk-card-media-right uk-cover-container uk-position-relative">
-                <canvas width="290" height="180"></canvas>
-                <img src="assets/images/luxury.jpg" alt="" data-uk-cover>
-                <div class="impx-overlay light overlay-squared padding-xwide"></div>
-              </div>
-            </div>
-          </div>
-        </li><!-- room item #3 end -->
-        <li>
-          <!-- room item #4 -->
-          <div class="impx-room-item medium uk-box-shadow-large">
-            <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s" data-uk-grid>
-              <div class="uk-card-body uk-position-relative impx-padding-medium">
-                <div class="uk-card-header uk-padding-remove-horizontal">
-                  <h4 class="uk-card-title uk-margin-remove-bottom">Deluxe Room</h4>
-                  <p class="uk-text-meta uk-margin-remove-top">Subtitle Goes Here </p>
-                </div>
-                <span class="uk-card-badge uk-label bg-color-aqua">from $150/night</span>
-                <ul class="uk-list room-fac">
-                  <li><span class="impx-text-aqua" data-uk-icon="icon: check; ratio: 1;"></span> Beatus in maximarum timore</li>
-                  <li><span class="impx-text-aqua" data-uk-icon="icon: check; ratio: 1;"></span> Oculis Compensabatur</li>
-                  <li><span class="impx-text-aqua" data-uk-icon="icon: check; ratio: 1;"></span> Dolorisnos veriusque nihil</li>
-                </ul>
-
-                <div class="uk-card-footer uk-padding-remove-horizontal uk-padding-remove-bottom">
-                  <a [routerLink]="['/deluxe-room']" class="uk-button uk-button-text impx-text-aqua">Read more &raquo;</a>
-                </div>
-              </div>
-              <div class="uk-card-media-right uk-cover-container uk-position-relative">
-                <canvas width="290" height="180"></canvas>
-                <img src="assets/images/luxury.jpg" alt="" data-uk-cover>
-                <div class="impx-overlay light overlay-squared padding-xwide"></div>
-              </div>
-            </div>
-          </div>
-        </li><!-- room item #4 end -->
+      
       </ul>
       <!-- rooms items end -->
     </div>

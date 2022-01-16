@@ -4,25 +4,23 @@
 
 export const environment = {
   production: false,
-   firebaseConfig : {
+  firebaseConfig: {
+    apiKey: 'AIzaSyBY-r57AWg7mAEQLD1xW1ek6cf8nKbbVlU',
 
-    apiKey: "AIzaSyBY-r57AWg7mAEQLD1xW1ek6cf8nKbbVlU",
+    authDomain: 'the-rocks-hotel.firebaseapp.com',
 
-    authDomain: "the-rocks-hotel.firebaseapp.com",
+    databaseURL: 'https://the-rocks-hotel-default-rtdb.firebaseio.com',
 
-     databaseURL: "https://the-rocks-hotel-default-rtdb.firebaseio.com",
+    projectId: 'the-rocks-hotel',
 
-    projectId: "the-rocks-hotel",
+    storageBucket: 'the-rocks-hotel.appspot.com',
 
-    storageBucket: "the-rocks-hotel.appspot.com",
+    messagingSenderId: '294845748203',
 
-    messagingSenderId: "294845748203",
+    appId: '1:294845748203:web:3206a2827325900bd6bfae',
 
-    appId: "1:294845748203:web:3206a2827325900bd6bfae",
-
-    measurementId: "G-N7M3ZBXM3Y"
-
-    }
+    measurementId: 'G-N7M3ZBXM3Y',
+  },
 };
 
 /*

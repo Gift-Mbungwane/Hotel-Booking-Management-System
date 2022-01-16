@@ -1,4 +1,4 @@
-@import 'https://use.fontawesome.com/releases/v5.5.0/css/all.css';
+@import "https://use.fontawesome.com/releases/v5.5.0/css/all.css";
 
 * {
   -webkit-box-sizing: border-box;
@@ -13,7 +13,7 @@ body {
   font-weight: 400;
   width: 100%;
   height: 100%;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .feather {
@@ -36,19 +36,19 @@ h6 {
   margin-bottom: 20px;
 }
 
-  .media-body h1 strong {
-    font-weight: 600;
-  }
+.media-body h1 strong {
+  font-weight: 600;
+}
 
 .media-body p {
   margin-bottom: 10px;
   font-weight: 300;
 }
 
-  .media-body p strong {
-    margin-bottom: 10px;
-    font-weight: 600;
-  }
+.media-body p strong {
+  margin-bottom: 10px;
+  font-weight: 600;
+}
 
 .px-logo {
   display: block;
@@ -57,15 +57,15 @@ h6 {
   width: 220px;
 }
 
-  .px-logo a img {
-    width: 100%;
-  }
+.px-logo a img {
+  width: 100%;
+}
 
 .displayTable {
   display: table;
   width: 100%;
   height: 100%;
-  background: #3F51B5;
+  background: #3f51b5;
 }
 
 .displayTableCell {
@@ -87,8 +87,8 @@ h3 {
   background: white;
   padding: 30px 40px 10px;
   overflow: hidden;
-  -webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, .04);
-  box-shadow: 0 0 4px 0 rgba(0, 0, 0, .04);
+  -webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.04);
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.04);
 }
 
 label {
@@ -115,24 +115,24 @@ label {
   background: #fcfcfc;
 }
 
-  .formControl:focus {
-    border: 2px solid #d3d3d6
-  }
+.formControl:focus {
+  border: 2px solid #d3d3d6;
+}
 
 input::-webkit-input-placeholder {
-  color: #BBBBBB;
+  color: #bbbbbb;
 }
 
 input::-moz-placeholder {
-  color: #BBBBBB;
+  color: #bbbbbb;
 }
 
 input:-ms-input-placeholder {
-  color: #BBBBBB;
+  color: #bbbbbb;
 }
 
 input:-moz-placeholder {
-  color: #BBBBBB
+  color: #bbbbbb;
 }
 
 .displayTable .btn {
@@ -141,18 +141,18 @@ input:-moz-placeholder {
   font-size: 16px;
   font-weight: 600;
   padding: 15px 0;
-  background: #15CD72;
+  background: #15cd72;
   color: #ffffff;
   cursor: pointer;
   outline: none;
 }
 
-  .displayTable .btn:hover {
-    opacity: .88;
-  }
+.displayTable .btn:hover {
+  opacity: 0.88;
+}
 
 .displayTable .btnSecondary {
-  background: #EEEEEE;
+  background: #eeeeee;
   color: #404040;
 }
 
@@ -183,7 +183,7 @@ input:-moz-placeholder {
 
 .or:before {
   position: absolute;
-  content: '';
+  content: "";
   left: 0;
   top: 11px;
   width: 100%;
@@ -210,14 +210,14 @@ input:-moz-placeholder {
   width: 100%;
 }
 
-  .forgotPassword span {
-    color: #3C89EF;
-    font-size: 14px;
-    font-weight: 400;
-    cursor: pointer;
-    display: inline-block;
-    padding-top: 20px;
-  }
+.forgotPassword span {
+  color: #3c89ef;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  display: inline-block;
+  padding-top: 20px;
+}
 
 .redirectToLogin {
   padding: 15px 0 0;
@@ -225,14 +225,14 @@ input:-moz-placeholder {
   font-size: 14px;
   font-weight: 400;
   display: block;
-  color: rgba(255, 255, 255, .6);
+  color: rgba(255, 255, 255, 0.6);
 }
 
-  .redirectToLogin .redirect {
-    cursor: pointer;
-    color: #ffffff;
-    text-decoration: underline;
-  }
+.redirectToLogin .redirect {
+  cursor: pointer;
+  color: #ffffff;
+  text-decoration: underline;
+}
 
 /* * Sidebar */
 .sidebar {
@@ -244,19 +244,19 @@ input:-moz-placeholder {
   /* Behind the navbar */
   padding: 48px 0 0;
   /* Height of navbar */
-  box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.1);
 }
 
 .sidebar-sticky {
   position: relative;
   top: 0;
   height: calc(100vh - 48px);
-  padding-top: .5rem;
+  padding-top: 0.5rem;
   overflow-x: hidden;
   overflow-y: auto;
 }
 
-@supports ((position:-webkit-sticky) or (position:sticky)) {
+@supports ((position: -webkit-sticky) or (position: sticky)) {
   .sidebar-sticky {
     position: -webkit-sticky;
     position: sticky;
@@ -268,13 +268,13 @@ input:-moz-placeholder {
   color: #333;
 }
 
-  .sidebar .nav-link .feather {
-    margin-right: 4px;
-    color: #999;
-  }
+.sidebar .nav-link .feather {
+  margin-right: 4px;
+  color: #999;
+}
 
 .sidebar-heading {
-  font-size: .75rem;
+  font-size: 0.75rem;
   text-transform: uppercase;
 }
 
@@ -288,7 +288,7 @@ input:-moz-placeholder {
 .sidebar a:hover,
 a:not([href]):not([tabindex]):focus,
 a:not([href]):not([tabindex]):hover {
-  color: #E91E63;
+  color: #e91e63;
   background: #efefef;
 }
 
@@ -298,8 +298,8 @@ a:not([href]):not([tabindex]):hover {
 }
 
 .dasboard-text {
-  border-left: 1px solid rgb(255, 255, 255, .3);
-  color: rgb(255, 255, 255, .5);
+  border-left: 1px solid rgb(255, 255, 255, 0.3);
+  color: rgb(255, 255, 255, 0.5);
   display: inline-block;
   padding: 0 0 0 14px;
   font-size: 15px;
@@ -310,29 +310,29 @@ a:not([href]):not([tabindex]):hover {
 
 /* * Navbar */
 .navbar-brand {
-  padding-top: .75rem;
-  padding-bottom: .75rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
 }
 
 .navbar .form-control {
-  padding: .75rem 1rem;
+  padding: 0.75rem 1rem;
   border-width: 0;
   border-radius: 0;
 }
 
 .form-control-dark {
   color: #fff;
-  background-color: rgba(255, 255, 255, .1);
-  border-color: rgba(255, 255, 255, .1);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.1);
 }
 
-  .form-control-dark:focus {
-    border-color: transparent;
-    box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
-  }
+.form-control-dark:focus {
+  border-color: transparent;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.25);
+}
 
 .form-control:focus {
-  border-color: #00BCD4;
+  border-color: #00bcd4;
   box-shadow: none;
 }
 
@@ -341,7 +341,7 @@ a:not([href]):not([tabindex]):hover {
 }
 
 .bg-dark {
-  background-color: #3F51B5 !important;
+  background-color: #3f51b5 !important;
 }
 
 .gap-right {
@@ -362,13 +362,13 @@ i {
   cursor: pointer;
 }
 
-  .action-block .fa-edit:hover {
-    color: #009688;
-  }
+.action-block .fa-edit:hover {
+  color: #009688;
+}
 
-  .action-block .fa-trash-alt:hover {
-    color: #E91E63;
-  }
+.action-block .fa-trash-alt:hover {
+  color: #e91e63;
+}
 
 .btn-primary.focus,
 .btn-primary:focus {
@@ -389,7 +389,7 @@ body .ngx-pagination li:last-child {
 }
 
 body .ngx-pagination .current {
-  background: #055AF9;
+  background: #055af9;
 }
 
 .ngx-pagination a:hover,
@@ -440,7 +440,7 @@ label {
 }
 
 .form-control {
-  padding: 1.375rem .75rem;
+  padding: 1.375rem 0.75rem;
 }
 
 /* Misc */
@@ -454,7 +454,7 @@ label {
   font-size: 28px;
   color: #a9a6c5;
   font-weight: 300;
-  letter-spacing: .2px;
+  letter-spacing: 0.2px;
 }
 
 [role="main"] {
@@ -472,7 +472,7 @@ label {
 .custom-text {
   font-size: 15px;
   color: #5f5f5f;
-  letter-spacing: .2px;
+  letter-spacing: 0.2px;
 }
 
 .navbar-dark .navbar-brand {
@@ -518,16 +518,16 @@ body .table thead th {
 }
 
 .navbar-dark .navbar-nav .nav-link {
-  color: rgba(255, 255, 255, 1)
+  color: rgba(255, 255, 255, 1);
 }
 
 .card {
-  border: none
+  border: none;
 }
 
 .list-group-item {
   padding: 0 1.25rem 15px;
-  border: none
+  border: none;
 }
 
 .fa-sign-out-alt {
@@ -550,7 +550,7 @@ body .table thead th {
 }
 
 /* Responsive */
-@media(max-width:767px) {
+@media (max-width: 767px) {
   .sidebar {
     position: static;
     padding: 40px 0 10px;
@@ -589,15 +589,15 @@ body .table thead th {
     height: auto;
   }
 
-    .sidebar-sticky .nav li {
-      width: 50%;
-      text-align: center;
-      border-right: 1px solid #c7ceff;
-    }
+  .sidebar-sticky .nav li {
+    width: 50%;
+    text-align: center;
+    border-right: 1px solid #c7ceff;
+  }
 
-      .sidebar-sticky .nav li:last-child {
-        border: none;
-      }
+  .sidebar-sticky .nav li:last-child {
+    border: none;
+  }
 
   .no-data img {
     max-width: 100%;
@@ -653,14 +653,57 @@ body .table thead th {
   }
 
   .displayTable {
-    background: white
+    background: white;
   }
 
   .authBlock {
-    box-shadow: none
+    box-shadow: none;
   }
 
   .px-logo {
     display: none;
   }
+}
+.message {
+  position: absolute;
+  width: 90%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 100%);
+  transition: all 1s;
+  opacity: 0;
+}
+
+.image-container:hover .message {
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
+
+Although Above answers are correct I would like to add,
+.css p {
+  font-family: Lato;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+
+img {
+  height: 200px;
+  width: 200px;
+  border: 5px solid #000;
+  border-radius: 50%;
+}
+
+.select-profile-picture {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
 }

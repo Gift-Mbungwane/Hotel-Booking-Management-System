@@ -1,5 +1,5 @@
 .carousel-inner .item:after {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   height: 100%;
@@ -7,16 +7,44 @@
   left: 0;
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+0,ffffff+26,ffffff+30,0e2646+100&0+0,1+99 */
 
-  background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.26) 26%, rgba(255, 255, 255, 0.3) 30%, rgba(17, 41, 73, 1) 99%, rgba(14, 38, 70, 1) 100%);
+  background: -moz-linear-gradient(
+    top,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.26) 26%,
+    rgba(255, 255, 255, 0.3) 30%,
+    rgba(17, 41, 73, 1) 99%,
+    rgba(14, 38, 70, 1) 100%
+  );
   /* FF3.6-15 */
 
-  background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.26) 26%, rgba(255, 255, 255, 0.3) 30%, rgba(17, 41, 73, 1) 99%, rgba(14, 38, 70, 1) 100%);
+  background: -o-linear-gradient(
+    top,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.26) 26%,
+    rgba(255, 255, 255, 0.3) 30%,
+    rgba(17, 41, 73, 1) 99%,
+    rgba(14, 38, 70, 1) 100%
+  );
   /* FF3.6-15 */
 
-  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.26) 26%, rgba(255, 255, 255, 0.3) 30%, rgba(17, 41, 73, 1) 99%, rgba(14, 38, 70, 1) 100%);
+  background: -webkit-linear-gradient(
+    top,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.26) 26%,
+    rgba(255, 255, 255, 0.3) 30%,
+    rgba(17, 41, 73, 1) 99%,
+    rgba(14, 38, 70, 1) 100%
+  );
   /* Chrome10-25,Safari5.1-6 */
 
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.26) 26%, rgba(255, 255, 255, 0.3) 30%, rgba(17, 41, 73, 1) 99%, rgba(14, 38, 70, 1) 100%);
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.26) 26%,
+    rgba(255, 255, 255, 0.3) 30%,
+    rgba(17, 41, 73, 1) 99%,
+    rgba(14, 38, 70, 1) 100%
+  );
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   /* IE6-9 */
 }
@@ -67,14 +95,15 @@
   background-color: #333;
   color: #f1f1f1;
   border-radius: 0;
-  transition: .2s;
+  transition: 0.2s;
 }
 
-  .btn:hover, .btn:focus {
-    border: 1px solid #333;
-    background-color: #fff;
-    color: #000;
-  }
+.btn:hover,
+.btn:focus {
+  border: 1px solid #333;
+  background-color: #fff;
+  color: #000;
+}
 
 .nav-tabs li {
   color: #777;
@@ -94,9 +123,10 @@ a {
   opacity: 0.9;
 }
 
-  .navbar li a, .navbar .navbar-brand {
-    color: #d5d5d5 !important;
-  }
+.navbar li a,
+.navbar .navbar-brand {
+  color: #d5d5d5 !important;
+}
 
 .navbar-nav li a:hover {
   color: #fff !important;
@@ -121,15 +151,16 @@ a {
   position: relative;
 }
 
-  .dropdown-menu li a:hover {
-    background-color: #337ab7 !important;
-  }
+.dropdown-menu li a:hover {
+  background-color: #337ab7 !important;
+}
 
 .jasmine-price {
   font-size: 20px;
 }
 
-::before, ::after {
+::before,
+::after {
   box-sizing: border-box;
 }
 
@@ -154,13 +185,13 @@ a {
   z-index: 9;
 }
 
-  .jasmine-banner-widgets .book-now {
-    font-size: 16px;
-  }
+.jasmine-banner-widgets .book-now {
+  font-size: 16px;
+}
 
 h1 {
   margin: 0;
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   line-height: normal;
   font-weight: 900;
   margin-bottom: 20px;
@@ -202,7 +233,6 @@ h1 {
   }
 }
 
-
 @media screen and (max-width: 991px) {
   .jasmine-banner-widgets .flex {
     display: inline-block;
@@ -237,13 +267,13 @@ h1 {
     height: 380px;
   }
 
-    .carousel-inner > .item {
-      height: 100%;
-    }
+  .carousel-inner > .item {
+    height: 100%;
+  }
 
-      .carousel-inner > .item > img {
-        height: 100%;
-      }
+  .carousel-inner > .item > img {
+    height: 100%;
+  }
 
   .jasmine-banner-widgets .book-now {
     font-size: 18px;
@@ -267,15 +297,15 @@ h1 {
     margin-bottom: 0;
   }
 
-    .carousel-indicators li {
-      width: 9px;
-      height: 9px;
-    }
+  .carousel-indicators li {
+    width: 9px;
+    height: 9px;
+  }
 
-    .carousel-indicators .active {
-      width: 10px;
-      height: 10px;
-    }
+  .carousel-indicators .active {
+    width: 10px;
+    height: 10px;
+  }
 
   .jasmine-banner-widgets .book-now {
     font-size: 16px;
@@ -290,7 +320,7 @@ h1 {
   width: 100%;
   display: inline-block;
   vertical-align: top;
-  background-color: #1C1C1C;
+  background-color: #1c1c1c;
 }
 
 .jasmine-footer-box .footer-logo {
@@ -302,15 +332,14 @@ h1 {
   margin-left: 0px;
 }
 
-
 .footer-about {
   font-size: 16px;
-  font-family: 'PlayfairDisplay-Regular';
+  font-family: "PlayfairDisplay-Regular";
 }
 
-  .footer-about li {
-    margin: 10px 0;
-  }
+.footer-about li {
+  margin: 10px 0;
+}
 
 .footer-menu {
   margin: 35px 0 0 0;
@@ -320,67 +349,67 @@ h1 {
   margin-left: 0px;
 }
 
-  .footer-menu.list li {
-    margin: 0 0 10px 0;
-  }
+.footer-menu.list li {
+  margin: 0 0 10px 0;
+}
 
-    .footer-menu.list li a:hover {
-      margin-left: 5px;
-    }
+.footer-menu.list li a:hover {
+  margin-left: 5px;
+}
 
-  .footer-menu.gallery {
-    width: 100%;
-    display: inline-block;
-    vertical-align: top;
-  }
+.footer-menu.gallery {
+  width: 100%;
+  display: inline-block;
+  vertical-align: top;
+}
 
-    .footer-menu.gallery li {
-      float: left;
-      margin: 0 2% 2% 0;
-      width: 32%;
-      overflow: hidden;
-    }
+.footer-menu.gallery li {
+  float: left;
+  margin: 0 2% 2% 0;
+  width: 32%;
+  overflow: hidden;
+}
 
-      .footer-menu.gallery li:nth-child(3n+3) {
-        margin: 0;
-      }
+.footer-menu.gallery li:nth-child(3n + 3) {
+  margin: 0;
+}
 
-      .footer-menu.gallery li a {
-        position: relative;
-        overflow: hidden;
-        width: 100%;
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
-        -webkit-transform: translateZ(0);
-        -moz-transform: translateZ(0);
-        -o-transform: translateZ(0);
-        transform: translateZ(0);
-      }
+.footer-menu.gallery li a {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+}
 
-        .footer-menu.gallery li a *,
-        .footer-menu.gallery li a *:before,
-        .footer-menu.gallery li a *:after {
-          -webkit-transition: all 0.4s ease;
-          -moz-transition: all 0.4s ease;
-          -o-transition: all 0.4s ease;
-          transition: all 0.4s ease;
-        }
+.footer-menu.gallery li a *,
+.footer-menu.gallery li a *:before,
+.footer-menu.gallery li a *:after {
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
 
-        .footer-menu.gallery li a img {
-          max-width: 100%;
-          backface-visibility: hidden;
-          vertical-align: top;
-        }
+.footer-menu.gallery li a img {
+  max-width: 100%;
+  backface-visibility: hidden;
+  vertical-align: top;
+}
 
-      .footer-menu.gallery li:hover a img {
-        zoom: 1;
-        filter: opacity(70);
-        opacity: 0.7;
-        -webkit-transform: scale(1.2);
-        -moz-transform: scale(1.2);
-        -o-transform: scale(1.2);
-        transform: scale(1.2);
-      }
+.footer-menu.gallery li:hover a img {
+  zoom: 1;
+  filter: opacity(70);
+  opacity: 0.7;
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
+}
 
 .footer-btm {
   padding: 30px 0;
@@ -388,15 +417,15 @@ h1 {
   padding-right: 0px;
   padding-bottom: 30px;
   padding-left: 0px;
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-weight: 400;
   background-color: #121212;
 }
 
-  .footer-btm h6 {
-    font-family: 'Playfair Display', serif;
-    font-weight: 400;
-  }
+.footer-btm h6 {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+}
 
 @media screen and (max-width: 767px) {
   .jasmine-f-30 {
@@ -431,15 +460,15 @@ h1 {
     padding: 20px 0;
   }
 
-    .footer-btm .pull-right {
-      float: left !important;
-      margin: 10px 0 0 0;
-    }
+  .footer-btm .pull-right {
+    float: left !important;
+    margin: 10px 0 0 0;
+  }
 
-    .footer-btm .pull-left,
-    .footer-btm .pull-right {
-      width: 100%;
-    }
+  .footer-btm .pull-left,
+  .footer-btm .pull-right {
+    width: 100%;
+  }
 }
 
 .jasmine-100 {
@@ -450,33 +479,71 @@ h1 {
   padding-left: 0px;
 }
 
-
-.col-xs-1, .col-xs-2, .col-xs-3,
-.col-xs-4, .col-xs-5, .col-xs-6,
-.col-xs-7, .col-xs-8, .col-xs-9,
-.col-xs-10, .col-xs-11, .col-xs-12,
-.col-sm-1, .col-sm-2, .col-sm-3,
-.col-sm-4, .col-sm-5, .col-sm-6,
-.col-sm-7, .col-sm-8, .col-sm-9,
-.col-sm-10, .col-sm-11, .col-sm-12,
-.col-md-1, .col-md-2, .col-md-3,
-.col-md-4, .col-md-5, .col-md-6,
-.col-md-7, .col-md-8, .col-md-9,
-.col-md-10, .col-md-11, .col-md-12,
-.col-lg-1, .col-lg-2, .col-lg-3,
-.col-lg-4, .col-lg-5, .col-lg-6,
-.col-lg-7, .col-lg-8, .col-lg-9,
-.col-lg-10, .col-lg-11, .col-lg-12 {
+.col-xs-1,
+.col-xs-2,
+.col-xs-3,
+.col-xs-4,
+.col-xs-5,
+.col-xs-6,
+.col-xs-7,
+.col-xs-8,
+.col-xs-9,
+.col-xs-10,
+.col-xs-11,
+.col-xs-12,
+.col-sm-1,
+.col-sm-2,
+.col-sm-3,
+.col-sm-4,
+.col-sm-5,
+.col-sm-6,
+.col-sm-7,
+.col-sm-8,
+.col-sm-9,
+.col-sm-10,
+.col-sm-11,
+.col-sm-12,
+.col-md-1,
+.col-md-2,
+.col-md-3,
+.col-md-4,
+.col-md-5,
+.col-md-6,
+.col-md-7,
+.col-md-8,
+.col-md-9,
+.col-md-10,
+.col-md-11,
+.col-md-12,
+.col-lg-1,
+.col-lg-2,
+.col-lg-3,
+.col-lg-4,
+.col-lg-5,
+.col-lg-6,
+.col-lg-7,
+.col-lg-8,
+.col-lg-9,
+.col-lg-10,
+.col-lg-11,
+.col-lg-12 {
   position: relative;
   min-height: 1px;
   padding-right: 15px;
   padding-left: 15px;
 }
 
-.col-lg-1, .col-lg-2, .col-lg-3,
-.col-lg-4, .col-lg-5, .col-lg-6,
-.col-lg-7, .col-lg-8, .col-lg-9,
-.col-lg-10, .col-lg-11 {
+.col-lg-1,
+.col-lg-2,
+.col-lg-3,
+.col-lg-4,
+.col-lg-5,
+.col-lg-6,
+.col-lg-7,
+.col-lg-8,
+.col-lg-9,
+.col-lg-10,
+.col-lg-11 {
   float: left;
 }
 
@@ -502,11 +569,12 @@ h1 {
   text-align: center;
 }
 
-  .back_to_top.active {
-    right: 15px;
-  }
+.back_to_top.active {
+  right: 15px;
+}
 
-ul, li {
+ul,
+li {
   list-style-type: none;
   margin: 0;
   margin-top: 0px;
