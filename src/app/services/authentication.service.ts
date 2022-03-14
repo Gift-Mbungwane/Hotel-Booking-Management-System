@@ -28,11 +28,11 @@ export class AuthenticationService {
     this.angularFireAuthenticantion.authState.subscribe((user) => {
       if (user) {
         this.userData = user;
-        localStorage.setItem('user', JSON.stringify(this.userData));
+        localStorage.setItem('user', JSON.stringify(user));
         JSON.parse(localStorage.getItem('user'));
+        console.log(user, " this is the token given by on authState ")
       } else {
         localStorage.setItem('user', null);
-        JSON.parse(localStorage.getItem('user'));
       }
     });
   }
@@ -43,23 +43,29 @@ export class AuthenticationService {
       return await this.angularFireAuthenticantion
         .signInWithEmailAndPassword(email, password)
         .then((result) => {
-          this.ngZone.run(() => {
-            //  this.router.navigate(['userprofile']);
 
-            if (result.user.email.toString() === email.toString()) {
-              return this.router.navigate(['home']);
-            } else {
-              this.router.navigate(['home']);
-            }
-          });
-          console.log(result.user.email + 'this is the id');
+          this.userData = result.user;
+          localStorage.setItem('user', JSON.stringify(result));
+            console.log(result, " this is the provider uid")
+            this.router.navigate(['/home']);
+         // this.isLoggedIn();
+          // this.ngZone.run(() => {
+          //   //  this.router.navigate(['userprofile']);
+          //   return this.router.navigateByUrl("/home");
+          //   if (result.user.email.toString() === email.toString()) {
+          //     return this.router.navigate(['home']);
+          //   } else {
+              // this.router.navigate(['home']);
+          //   }
+          // });
+          // console.log(result.user.email + 'this is the id');
 
-          console.log('this is the id' + email);
-        })
-        .catch((error) => {
-          const errorMess = error.message;
-          alert('unable to locate the uid' + errorMess);
-        });
+          // console.log('this is the id' + email);
+        // })
+        // .catch((error) => {
+        //   const errorMess = error.message;
+        //   alert('unable to locate the uid' + errorMess);
+        }).catch((error) => alert(error))
       //alert('you now logged in');
       //this.router.navigate(['room-details']);
       // this.SetUserData(result);
@@ -71,24 +77,26 @@ export class AuthenticationService {
   // Sign up with email/password
   async SignUp(email: string, password: string) {
     try {
-      const userCredential =
         await this.angularFireAuthenticantion.createUserWithEmailAndPassword(
           email,
           password
-        );
-      const user = userCredential.user;
-      try {
-        await this.angularFirestore.collection('users').doc(user.uid).set({
-          uid: user.uid,
-          address: user.email,
-          password: password,
-        });
-        alert('you have been successfully registered');
-        this.router.navigate(['home']);
-      } catch (error) {
-        const errorMessage = error.message;
-        alert(errorMessage);
-      }
+        ).then((userCredential) => {
+
+          const user = userCredential.user;
+
+          this.angularFirestore.collection('users').doc(user.uid).set({
+            uid: user.uid,
+            address: user.email,
+            password: password,
+            photoURL: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ--YojU5VvzMydwxBwuroHtFGUPi9by51TbQ&usqp=CAU",
+          }).then(() => {
+            alert('you have been successfully registered');
+            localStorage.setItem('user', JSON.stringify(userCredential));
+          }).catch((error) => alert(error));
+          
+         return this.router.navigate(['/home']);
+        })
+     
     } catch (error_1) {
       alert(error_1.message);
     }
@@ -116,9 +124,24 @@ export class AuthenticationService {
   }
 
   // Returns true when user is looged in and email is verified
-  get isLoggedIn(): boolean {
-    const user = JSON.parse(localStorage.getItem('user'));
-    return user !== null && user.emailVerified !== false ? true : false;
+   isLoggedIn() {
+    this.angularFireAuthenticantion.authState.subscribe((user) => {
+      if (user) {
+        this.userData = user;
+        localStorage.getItem('user');
+        console.log(localStorage.getItem("user"), " this is the token given by on authState ")
+       this.router.navigate(['/room-details']);
+       
+      } else {
+        
+        // localStorage.setItem('user', null);
+        return this.router.navigate(['/login']);
+      }
+    });
+    
+ 
+    // const user = JSON.parse(localStorage.getItem('user'));
+    // return user !== null && user.emailVerified !== false ? true : false;
   }
 
   // Sign in with Google
@@ -159,10 +182,31 @@ export class AuthenticationService {
     });
   }
 
+  isProfile() {
+    this.angularFireAuthenticantion.authState.subscribe((user) => {
+      if (user) {
+        this.userData = user;
+        localStorage.getItem('user');
+        console.log(localStorage.getItem("user"), " this is the token given by on authState ");
+         this.router.navigate(['/userprofile']);
+        
+      } else {
+        alert("PLease Sign In");        
+        // localStorage.setItem('user', null);
+         this.router.navigate(['/login']);
+      }
+    });
+    
+  }
+
   // Sign out
   async SignOut() {
-    await this.angularFireAuthenticantion.signOut();
-    localStorage.removeItem('user');
-    this.router.navigate(['signin']);
+    await this.angularFireAuthenticantion.signOut().then(() => {
+      localStorage.removeItem('user');
+      alert("you're now logged out")
+      this.router.navigate(['/login']);
+    }).catch((error) => alert(error));
+  
+    
   }
 }

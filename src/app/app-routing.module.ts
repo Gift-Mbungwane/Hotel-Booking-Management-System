@@ -7,6 +7,7 @@ import { DeluxeroomComponent } from './deluxeroom/deluxeroom.component';
 import { DoubleroomComponent } from './doubleroom/doubleroom.component';
 import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
 import { AuthGuard } from './guards';
+import { ProfileGuard } from './guards/profile.guard';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { PaymentComponent } from './payment/payment.component';
@@ -18,17 +19,20 @@ import { UserprofileComponent } from './userprofile/userprofile.component';
 import { VerifyemailComponent } from './verifyemail/verifyemail.component';
 
 export const appRoutes: Routes = [
-  { path: 'login', redirectTo: 'login', pathMatch: 'full' },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent, data: { requiresLogin: true } },
   { path: 'register', component: RegisterComponent },
   { path: 'app', component: AppComponent },
-  { path: 'userprofile', component: UserprofileComponent },
-  { path: 'home', component: HomeComponent },
+  { path: 'userprofile', component: UserprofileComponent,
+  //  canActivate: [ProfileGuard]
+  },
+  { path: 'home', component: HomeComponent},
   { path: 'contact', component: ContactComponent },
   { path: 'about', component: AboutComponent },
   {
     path: 'room-details',
     component: RoomDetailsComponent,
+    canActivate: [AuthGuard]
   },
   { path: 'double-room', component: DoubleroomComponent },
   { path: 'premiere-room', component: PremiereroomComponent },
@@ -39,7 +43,9 @@ export const appRoutes: Routes = [
   { path: 'verifyemail', component: VerifyemailComponent },
 ];
 @NgModule({
-  imports: [RouterModule.forRoot(appRoutes)],
+  imports: [RouterModule.forRoot(appRoutes, {
+    useHash: true,
+  })],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}

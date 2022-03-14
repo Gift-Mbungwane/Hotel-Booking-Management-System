@@ -96,6 +96,8 @@ export class RoomDetailsComponent implements OnInit {
       //this.bookinService.addCuctomer(this.bookingForm.value);
       this.angularFirestore
         .collection('bookings')
+        .doc(user.uid)
+        .collection("book")
         .add(this.bookingForm.value)
         .then((booking) => {
           booking.update({

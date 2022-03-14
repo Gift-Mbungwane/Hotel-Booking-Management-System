@@ -23,7 +23,7 @@ export class UserprofileComponent implements OnInit {
     public ngZone: NgZone
   ) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.getProfile();
     this.getBookings();
   }
@@ -34,7 +34,7 @@ export class UserprofileComponent implements OnInit {
         if (user) {
           this.uid = user.uid;
           return this.angularFirestore
-            .collection('users')
+            .collection('users').doc(user.uid).collection("user")
             .snapshotChanges()
             .subscribe((response) => {
               this.profile = response;
@@ -55,7 +55,7 @@ export class UserprofileComponent implements OnInit {
         if (user) {
           this.uid = user.uid;
           return this.angularFirestore
-            .collection('bookings')
+            .collection('bookings').doc(user.uid).collection("book")
             .snapshotChanges()
             .subscribe((response) => {
               this.booking = response;
@@ -64,7 +64,7 @@ export class UserprofileComponent implements OnInit {
         } else {
         }
       })
-      .then(() => {})
+      .then((res) => {})
       .catch((error) => {
         alert('unable to locate booking details');
       });
