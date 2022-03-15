@@ -41,6 +41,7 @@ import { RoomDetailsComponent } from './room-details/room-details.component';
 import { DoubleroomComponent } from './doubleroom/doubleroom.component';
 import { PremiereroomComponent } from './premiereroom/premiereroom.component';
 import { DeluxeroomComponent } from './deluxeroom/deluxeroom.component';
+import { ProfileGuard } from './guards/profile.guard';
 
 @NgModule({
   declarations: [
@@ -82,6 +83,7 @@ import { DeluxeroomComponent } from './deluxeroom/deluxeroom.component';
 
   providers: [
     AuthGuard,
+    ProfileGuard,
     AlertService,
     AuthenticationService,
     { provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: { hasBackdrop: false } },

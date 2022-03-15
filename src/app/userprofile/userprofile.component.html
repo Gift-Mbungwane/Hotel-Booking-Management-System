@@ -1,5 +1,5 @@
 <!-- Sidebar navigation -->
-<div class="container-fluid" *ngFor="let booking of booking" >
+<div class="container-fluid"  >
   <div class="row">
 
     <nav class="col-md-2 d-md-block bg-light sidebar">
@@ -50,7 +50,7 @@
           <div class="pt-3 pb-2 mb-3 border-bottom">
             <h1 class="h2">Bookings</h1>
           </div>
-          <div  >
+          <div *ngFor="let booking of booking" >
               <div class="media-body">
                 <p>Name and Surname: <strong>{{booking.payload.doc.data().firstName}} {{booking.payload.doc.data().surname}}</strong></p>
                 <p>Email: <strong>{{booking.payload.doc.data().email}}</strong></p>

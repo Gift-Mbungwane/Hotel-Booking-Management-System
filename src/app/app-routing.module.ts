@@ -6,8 +6,9 @@ import { ContactComponent } from './contact/contact.component';
 import { DeluxeroomComponent } from './deluxeroom/deluxeroom.component';
 import { DoubleroomComponent } from './doubleroom/doubleroom.component';
 import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
-import { AuthGuard } from './guards';
+import { AuthGuard} from './guards';
 import { ProfileGuard } from './guards/profile.guard';
+
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { PaymentComponent } from './payment/payment.component';
@@ -24,7 +25,7 @@ export const appRoutes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'app', component: AppComponent },
   { path: 'userprofile', component: UserprofileComponent,
-  //  canActivate: [ProfileGuard]
+    canActivate: [ProfileGuard]
   },
   { path: 'home', component: HomeComponent},
   { path: 'contact', component: ContactComponent },
