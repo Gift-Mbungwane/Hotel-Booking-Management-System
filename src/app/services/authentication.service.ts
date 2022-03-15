@@ -133,7 +133,7 @@ export class AuthenticationService {
        this.router.navigate(['/room-details']);
        
       } else {
-        
+        alert("PLease Sign In");        
         // localStorage.setItem('user', null);
         return this.router.navigate(['/login']);
       }
