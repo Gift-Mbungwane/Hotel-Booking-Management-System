@@ -30,6 +30,13 @@ module.exports = {
       config: JSON.stringify({
         apiUrl: 'http://localhost:3000'
       })
+    }),
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery",
+      "window.jQuery": "jquery",
+      "Hammer": "hammerjs/hammer",
+      datePicker: "jquery"
     })
   ],
   optimization: {

@@ -13,7 +13,7 @@ export class AlertService {
       if (event instanceof NavigationStart) {
         if (this.keepAfterNavigationChange) {
           // only keep for a single location change
-          this.keepAfterNavigationChange = false;
+          this.keepAfterNavigationChange = true;
         } else {
           // clear alert
           this.subject.next();
@@ -24,7 +24,7 @@ export class AlertService {
 
   success(message: string, keepAfterNavigationChange = false) {
     this.keepAfterNavigationChange = keepAfterNavigationChange;
-    this.subject.next({ type: 'success', text: message });
+    this.subject.next({ type: 'successfully created', text: message });
   }
 
   error(message: string, keepAfterNavigationChange = false) {

@@ -1,1 +1,230 @@
-<p>home works!</p>
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+    <li data-target="#myCarousel" data-slide-to="3"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <img src="assets/images/SlideImage1.png" alt="0" style="height: 600px;width: 100%">
+      <div class="jasmine jasmine-banner-widgets">
+        <div class="container">
+          <div class="row flex">
+
+            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+              <h1>
+                Live the Wonderous
+                <span class="spano">Life</span>
+              </h1>
+              <span class="jasmine-price">From $50 / day</span>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-10 col-xs-10">
+              <a class="book-now" [routerLink]="['/room-details']">Book Now</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="assets/images/SlideImage2.png" alt="1" style="height: 600px;width: 100%">
+      <div class="jasmine jasmine-banner-widgets">
+        <div class="container">
+          <div class="row flex">
+
+            <div class="col-lg-9 col-md-9 ">
+              <h1>
+                Live the Wonderous
+                <span class="spano">Life</span>
+              </h1>
+              <span class="jasmine-price">From $80 / day</span>
+            </div>
+            <div class="col-lg-3 col-md-3 ">
+              <a class="book-now" [routerLink]="['/room-details']">Book Now</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <img src="assets/images/SlideImage3.png" alt="2" style="height: 600px;width: 100%">
+      <div class="jasmine jasmine-banner-widgets">
+        <div class="container">
+          <div class="row flex">
+
+            <div class="col-lg-9 col-md-9 ">
+              <h1>
+                Live the Wonderous
+                <span class="spano">Life</span>
+              </h1>
+              <span class="jasmine-price">From $100 / day</span>
+            </div>
+            <div class="col-lg-3 col-md-3 ">
+              <a class="book-now" [routerLink]="['/room-details']">Book Now</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <img src="assets/images/SlideImage1.png" alt="3" style="height: 600px;width: 100%">
+      <div class="jasmine jasmine-banner-widgets">
+        <div class="container">
+          <div class="row flex">
+
+            <div class="col-lg-9 col-md-9 ">
+              <h1>
+                Live the Wonderous
+                <span class="spano">Life</span>
+              </h1>
+              <span class="jasmine-price">From $130 / day</span>
+            </div>
+            <div class="col-lg-3 col-md-3 ">
+              <a class="book-now" [routerLink]="['/room-details']">Book Now</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!--new rooms-->
+<div class="uk-padding  uk-padding-remove-horizontal"  *ngFor="let booking of booking" >
+  <div class="uk-container" >
+
+    <!-- ROOMS LIST -->
+    <div class="uk-position-relative uk-visible-toggle uk-margin-small-top" >
+      <ul class="uk-child-width-1-2@xl uk-child-width-1-2@l uk-child-width-1-2@m uk-child-width-1-1@s data-uk-grid uk-grid-match uk-margin-large-bottom" data-uk-grid>
+        <li>
+          <!-- room item #1 -->
+          <div class="impx-room-item medium uk-box-shadow-large" >
+            <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s" data-uk-grid >
+              <div class="uk-card-media-left uk-cover-container uk-position-relative">
+                <canvas width="290" height="180"></canvas>
+                <img src='{{booking.payload.doc.data().photoURL}}' alt="" data-uk-cover>
+                <div class="impx-overlay light overlay-squared padding-xwide"></div>
+              </div>
+              <div class="uk-card-body uk-position-relative impx-padding-medium" >
+                <div class="uk-card-header uk-padding-remove-horizontal">
+                  <h4 class="uk-card-title uk-margin-remove-bottom" >{{booking.payload.doc.data().name}}</h4>
+                  <p class="uk-text-meta uk-margin-remove-top">Subtitle Goes Here </p>
+                </div>
+                <span class="uk-card-badge uk-label bg-color-aqua">from ${{booking.payload.doc.data().price}}/night</span>
+                <ul class="uk-list room-fac" >
+                  <li><span class="impx-text-aqua" data-uk-icon="icon: check; ratio: 1;"></span> {{booking.payload.doc.data().name}}</li>
+                  <li><span class="impx-text-aqua" data-uk-icon="icon: check; ratio: 1;"></span> Oculis Compensabatur</li>
+                  <li><span class="impx-text-aqua" data-uk-icon="icon: check; ratio: 1;"></span> Dolorisnos veriusque nihil</li>
+                </ul>
+
+                <div class="uk-card-footer uk-padding-remove-horizontal uk-padding-remove-bottom">
+                  <a [routerLink]="['/room-details']" class="uk-button uk-button-text impx-text-aqua">Read more &raquo;</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li><!-- room item #1 end -->
+      
+      </ul>
+      <!-- rooms items end -->
+    </div>
+  </div>
+</div>
+
+<!--Footer Begins-->
+<footer class="jasmine">
+  <div class="jasmine-100 jasmine-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 jasmine-f-30 jasmine-f-100">
+          <div class="jasmine-footer-box">
+            <img class="footer-logo" src="assets/images/the-rock.png" alt="footer-logo">
+            <p class="spano">You have questions regarding our services? Contact us, we will be happy to help you out!</p>
+            <ul class="footer-about">
+              <li><a href="support@mlab.com">support@mlab.com</a></li>
+              <li><a href="javascript:;">Diepkloof 319-Iq, Soweto, 1862</a></li>
+              <li><a href="Tel: +27 012 844 0240">(+27) 012 844 0240</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6 jasmine-f-30 jasmine-f-50">
+          <div class="jasmine-footer-box">
+            <h5 class="spano">Hotel</h5>
+            <ul class="footer-menu list">
+              <li><a href="javascript:;">Accommodation</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="javascript:;">Services &amp; Amenities</a></li>
+              <li><a href="javascript:;">Dining</a></li>
+              <li><a href="javascript:;">Spa</a></li>
+              <li><a href="javascript:;">Destination</a></li>
+              <li><a href="javascript:;">Offer</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6 jasmine-fs-30 jasmine-f-50">
+          <div class="jasmine-footer-box">
+            <h5 class="spano">Inquires</h5>
+            <ul class="footer-menu list">
+              <li><a href="javascript:;">About  Four Seasons</a></li>
+              <li><a href="javascript:;">Press Room</a></li>
+              <li><a href="javascript:;">Gift Cards</a></li>
+              <li><a href="javascript:;">Residences</a></li>
+              <li><a href="javascript:;">Careers</a></li>
+              <li><a href="contact.html">Contact us</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 jasmine-f-100">
+          <div class="jasmine-footer-box">
+            <h5 class="spano">Photo Gallery</h5>
+            <ul class="footer-menu gallery">
+              <li>
+                <a href="single-rooms.html"><img src="assets/images/footer-gallery-1.jpg" alt="footer-gallery-1"></a>
+              </li>
+              <li>
+                <a href="single-rooms.html"><img src="assets/images/footer-gallery-2.jpg" alt="footer-gallery-2"></a>
+              </li>
+              <li>
+                <a href="single-rooms.html"><img src="assets/images/footer-gallery-3.jpg" alt="footer-gallery-3"></a>
+              </li>
+              <li>
+                <a href="single-rooms.html"><img src="assets/images/footer-gallery-4.jpg" alt="footer-gallery-4"></a>
+              </li>
+              <li>
+                <a href="single-rooms.html"><img src="assets/images/footer-gallery-5.jpg" alt="footer-gallery-5"></a>
+              </li>
+              <li>
+                <a href="single-rooms.html"><img src="assets/images/footer-gallery-6.jpg" alt="footer-gallery-6"></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="jasmine footer-btm">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h6 class="pull-left spano">Copyrights © 2021 The Rock's-Hotel</h6>
+          <span class="pull-right spano">Powered by <a target="_blank" href="https://mlab.co.za/">mlab.com</a></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- Backe To Top Begin -->
+<div id="back_to_top" class="active">
+  <i class="fa fa-angle-up" aria-hidden="true"></i>
+</div>

@@ -1,0 +1,77 @@
+<!-- Sidebar navigation -->
+<div class="container-fluid"  >
+  <div class="row">
+
+    <nav class="col-md-2 d-md-block bg-light sidebar">
+      <div class="sidebar-sticky">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link active">
+              <i class="fas fa-user">
+              </i>User Profile
+            </a>
+          </li>
+          <!-- Calling SignOut() Api from AuthService -->
+          <li class="nav-item">
+            <a class="nav-link" (click)="authenticationService.SignOut()">
+              <i class="fas fa-sign-out-alt"></i>Log out
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+    <!-- Main content -->
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4" style="float: right">
+      <div class="inner-adjust"  *ngFor="let profile of profile" >
+
+        <div class="pt-3 pb-2 mb-3 border-bottom">
+          <h1 class="h2">User Profile</h1>
+        </div>
+        <!-- Show user data when logged in -->
+        <div class="row" >
+          <div class="col-md-12">
+            <div class="media">
+              <div>
+              <img class="align-self-start mr-5 img-thumbnail rounded-circle" src='{{profile.payload.doc.data().photoURL}}'
+                   alt="{{profile.payload.doc.data().displayName}}">
+                  <span class="message">Tap here to select your picture</span>
+  
+              </div>
+              <div class="media-body">
+                <!-- <p>Name: <strong>{{profile.payload.doc.data().displayName}}</strong></p> -->
+                <p>Email: <strong>{{profile.payload.doc.data().address}}</strong></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="pt-3 pb-2 mb-3 border-bottom">
+            <h1 class="h2">Bookings</h1>
+          </div>
+          <div *ngFor="let booking of booking" >
+              <div class="media-body">
+                <p>Name and Surname: <strong>{{booking.payload.doc.data().firstName}} {{booking.payload.doc.data().surname}}</strong></p>
+                <p>Email: <strong>{{booking.payload.doc.data().email}}</strong></p>
+                <p>room: <strong>{{booking.payload.doc.data().roomType}}</strong></p>
+                <p>price: <strong>{{booking.payload.doc.data().price}}</strong></p>
+               <p>arrival date: <strong>{{booking.payload.doc.data().arrivalDate.toDate() | date: 'medium'}}</strong></p>
+                <p>departure date: <strong>{{booking.payload.doc.data().departureDate.toDate() | date: 'medium'}}</strong></p>
+                <p>guest/s: <strong>{{booking.payload.doc.data().guests}}</strong></p>
+                <p>phone: <strong>{{booking.payload.doc.data().phone}}</strong></p>
+                <p>booking made on: <strong>{{booking.payload.doc.data().timeStamp.toDate() | date: 'medium'}}</strong></p>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+              </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+ 
+</div>
